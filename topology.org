@@ -1,0 +1,49 @@
+* topology
+** 定義
+
+	 當一個集合 X 有一個伴隨 𝒯，𝒯 被稱為開集族，而 (X, 𝒯) 就是一個 topology
+
+	 其中，𝒯 是所有開集(open set)的類(collection)
+
+*** open set
+
+		open set 被定義為符合以下公理的，X 的子集合
+
+		- N ∈ 𝒯
+		- ∅ is open
+		- X is open
+		- ⋃ Nᵢ is open, where ᵢ ∈ Λ
+			即便有無限多個 N 的聯合，也依然是 open
+		- ⋂ Nᵢ is open, where ᵢ ∈ ℕ
+			有限多個 N 的交集是 open
+
+** 實例
+
+	 有了定義，就可以看一些實際案例來確認自己知道怎麼操作這些公理
+
+*** trivial topology
+
+		trivial topology is (X, {∅, X}), of course, there has no-hard thing to check
+
+**** special case
+
+		if we have X = ∅, then there has only one topology {∅} can fit
+
+*** particular point topology 特定點拓墣
+
+		particular point topology is about a X and a particular point p ∈ X
+
+		where topology 𝒯ₚ is { V | V = ∅ or p ∈ V }, of course, V ⊂ X
+
+		To believe it, we have to run axiom checking(but without ∅, X is open, which is trivial)
+
+		1. ⋃ Nᵢ ∈ 𝒯ₚ
+			 - ∀ᵢ . Nᵢ = ∅ ⟹  ⋃ Nᵢ = ∅
+			 - 否則任意 Nᵢ 都有 p ∈ Nᵢ，所以 p ∈ ⋃ Nᵢ，按照定義 ⋃ Nᵢ ∈ 𝒯ₚ
+		2. ⋂ Nᵢ ∈ 𝒯ₚ
+			 - ∃ ᵢ . Nᵢ = ∅ 則整個 ⋂ Nᵢ = ∅
+			 - 否則全部 Nᵢ ≠ ∅，所以 Nᵢ 都有 p ∈ Nᵢ，於是 ⋂ Nᵢ 必然含有 p，於是按照定義 ⋂ Nᵢ ∈ 𝒯ₚ
+
+		於是 (X, 𝒯ₚ) 是一個拓墣
+
+*** lower limit topology
