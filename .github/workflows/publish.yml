@@ -11,7 +11,7 @@ jobs:
     - uses: actions/checkout@v3
 
     - name: Install emacs
-      run: apt --update add emacs
+      run: apt install emacs
 
     - name: Render config into html
       run: cd scripts && sh render-emacs-config-to-html.sh
