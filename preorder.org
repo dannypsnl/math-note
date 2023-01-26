@@ -1,24 +1,35 @@
 * preorder 預序
 
 	A preorder is a relation on set X, such that, two elements of x, y ∈ X we can discuss x ≤ y.
+ 
+	The following definition are quite important for preorder, we will assume
 
-** poset (powerset)
+	- set X
+	- A ⊆ X 
+
+** upper/lower bound
+
+	 An element x ∈ X is an upper bound of A, iff ∀ a ∈ A, a ≤ x
+
+	 Reversely, x ∈ X is a lower bound of A, iff ∀ a ∈ A, x ≤ a
+
+** greatest/least element
+
+	 An upper bound x of A is the greatest element iff x ∈ A
+
+	 Reversely, lower bound x of A is the least element iff x ∈ A
+
+** maximal/minimal
+
+	 An element a ∈ A is maximal, if ∀ b, a ≤ b implies a ≅ b
+
+	 Reversely, a ∈ A is minimal, if ∀ b, b ≤ a implies b ≅ a
+
+* poset (preoder free from powerset)
 
 	*poset* is an interesting instance, its the preorder free from a powerset of any set X
 
 	The ⊆ is the ≤ here, for any two elements of powerset a, b ∈ P(X)
 	
 	- a ⋃ b is a ∨ b
-	- a ⋂ b is a ∧ b
-
-** upper/lower bound
-
-	 The definition of upper bound is,
-
-	 - set X
-	 - A ⊆ X
-
-	 An element x ∈ X is an upper bound of A, iff ∀ a ∈ A, a ≤ x
-
-	 Reversely, x ∈ X is a lower bound of A, iff ∀ a ∈ A, x ≤ a
-
+	- a ⋂ b is a ∧ b  
