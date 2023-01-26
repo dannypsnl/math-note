@@ -1,4 +1,4 @@
 * math note
-** topology
 
-	 [[file:./topology.org]]
+[[file:./topology.org]]
+[[file:./preorder.org]]
