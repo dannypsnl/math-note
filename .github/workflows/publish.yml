@@ -14,7 +14,7 @@ jobs:
       run: sudo apt-get install -y emacs
 
     - name: Render config into html
-      run: cd scripts && sh render-emacs-config-to-html.sh
+      run: sh render-emacs-config-to-html.sh
 
     - name: "publish org files"
       uses: peaceiris/actions-gh-pages@v3
