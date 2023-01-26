@@ -10,9 +10,15 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
+    - name: Install emacs
+      run: apk --update add emacs
+
+    - name: Render config into html
+      run: cd scripts && sh render-emacs-config-to-html.sh
+
     - name: "publish org files"
-      uses: tecosaur/org-knit-action@v0.3
+      uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: gh-pages
-        force_orphan: true
+        publish_dir: ./dist
+        publish_branch: gh-pages
