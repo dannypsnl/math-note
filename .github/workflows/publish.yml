@@ -2,11 +2,12 @@ name: Publish
 on: [push]
 
 jobs:
-  export:
+  publish:
     runs-on: ubuntu-latest
-    - name: Checkout
-      uses: actions/checkout@v2
-    - name: Export org files
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: "publish org files"
       uses: tecosaur/org-knit-action@v0.3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
