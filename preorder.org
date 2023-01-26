@@ -11,3 +11,14 @@
 	- a ⋃ b is a ∨ b
 	- a ⋂ b is a ∧ b
 
+** upper/lower bound
+
+	 The definition of upper bound is,
+
+	 - set X
+	 - A ⊆ X
+
+	 An element x ∈ X is an upper bound of A, iff ∀ a ∈ A, a ≤ x
+
+	 Reversely, x ∈ X is a lower bound of A, iff ∀ a ∈ A, x ≤ a
+
