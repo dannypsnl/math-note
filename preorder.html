@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-01-26 Thu 14:22 -->
+<!-- 2023-01-26 Thu 14:28 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
@@ -245,26 +245,77 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org46e2820">1. preorder 預序</a>
+<li><a href="#orgd5fec0d">1. preorder 預序</a>
 <ul>
-<li><a href="#orgeb67649">1.1. poset (powerset)</a></li>
-<li><a href="#org79099c2">1.2. upper/lower bound</a></li>
+<li><a href="#orge626bb4">1.1. upper/lower bound</a></li>
+<li><a href="#orgd741b45">1.2. greatest/least element</a></li>
+<li><a href="#org9497556">1.3. maximal/minimal</a></li>
 </ul>
 </li>
+<li><a href="#orgf49c272">2. poset (preoder free from powerset)</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org46e2820" class="outline-2">
-<h2 id="org46e2820"><span class="section-number-2">1</span> preorder 預序</h2>
+<div id="outline-container-orgd5fec0d" class="outline-2">
+<h2 id="orgd5fec0d"><span class="section-number-2">1</span> preorder 預序</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 A preorder is a relation on set X, such that, two elements of x, y ∈ X we can discuss x ≤ y.
 </p>
+
+<p>
+The following definition are quite important for preorder, we will assume
+</p>
+
+<ul class="org-ul">
+<li>set X</li>
+<li>A ⊆ X</li>
+</ul>
 </div>
 
-<div id="outline-container-orgeb67649" class="outline-3">
-<h3 id="orgeb67649"><span class="section-number-3">1.1</span> poset (powerset)</h3>
+<div id="outline-container-orge626bb4" class="outline-3">
+<h3 id="orge626bb4"><span class="section-number-3">1.1</span> upper/lower bound</h3>
 <div class="outline-text-3" id="text-1-1">
+<p>
+An element x ∈ X is an upper bound of A, iff ∀ a ∈ A, a ≤ x
+</p>
+
+<p>
+Reversely, x ∈ X is a lower bound of A, iff ∀ a ∈ A, x ≤ a
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd741b45" class="outline-3">
+<h3 id="orgd741b45"><span class="section-number-3">1.2</span> greatest/least element</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+An upper bound x of A is the greatest element iff x ∈ A
+</p>
+
+<p>
+Reversely, lower bound x of A is the least element iff x ∈ A
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9497556" class="outline-3">
+<h3 id="org9497556"><span class="section-number-3">1.3</span> maximal/minimal</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+An element a ∈ A is maximal, if ∀ b, a ≤ b implies a ≅ b
+</p>
+
+<p>
+Reversely, a ∈ A is minimal, if ∀ b, b ≤ a implies b ≅ a
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf49c272" class="outline-2">
+<h2 id="orgf49c272"><span class="section-number-2">2</span> poset (preoder free from powerset)</h2>
+<div class="outline-text-2" id="text-2">
 <p>
 <b>poset</b> is an interesting instance, its the preorder free from a powerset of any set X
 </p>
@@ -279,32 +330,9 @@ The ⊆ is the ≤ here, for any two elements of powerset a, b ∈ P(X)
 </ul>
 </div>
 </div>
-
-<div id="outline-container-org79099c2" class="outline-3">
-<h3 id="org79099c2"><span class="section-number-3">1.2</span> upper/lower bound</h3>
-<div class="outline-text-3" id="text-1-2">
-<p>
-The definition of upper bound is,
-</p>
-
-<ul class="org-ul">
-<li>set X</li>
-<li>A ⊆ X</li>
-</ul>
-
-<p>
-An element x ∈ X is an upper bound of A, iff ∀ a ∈ A, a ≤ x
-</p>
-
-<p>
-Reversely, x ∈ X is a lower bound of A, iff ∀ a ∈ A, x ≤ a
-</p>
-</div>
-</div>
-</div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Created: 2023-01-26 Thu 14:22</p>
+<p class="date">Created: 2023-01-26 Thu 14:28</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
