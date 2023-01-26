@@ -84,6 +84,29 @@
 
 	 where f, g : X → Y
 
+* proposition
+
+** Identity function on any preordered set is monotone
+** Composition of two monotone functions is monotone
+** Compose function between preordered sets is monotone
+
+	 Consider X, Y, Z be preordered sets
+
+	 ∘ : (Y -> Z) × (X -> Y) → (X → Z)
+	 ∘ (g, f) = λ x . g (f x)
+
+	 The compose function ∘ is monotone between preordered sets
+
+** f : X × Y → Z is monotone, if it's monotone in each variable separately
+
+	 details, it said
+
+	 x ≤ x' ⟹  f(x, y) ≤ f(x', y)
+
+	 and
+
+	 y ≤ y' ⟹  f(x, y) ≤ f(x, y')
+
 * poset (preoder free from powerset)
 
 	*poset* is an interesting instance, its the preorder free from a powerset of any set X
