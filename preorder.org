@@ -92,11 +92,11 @@
 
 	 Consider X, Y, Z be preordered sets
 
-	 ∘ : (Y -> Z) × (X -> Y) → (X → Z)
+	 ○ : (Y -> Z) × (X -> Y) → (X → Z)
 
-	 ∘ (g, f) = λ x . g (f x)
+	 ○ (g, f) = λ x . g (f x)
 
-	 The compose function ∘ is monotone between preordered sets
+	 The compose function ○ is monotone between preordered sets
 
 ** f : X × Y → Z is monotone, if it's monotone in each variable separately
 
