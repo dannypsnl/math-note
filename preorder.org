@@ -25,6 +25,27 @@
 
 	 Reversely, a ∈ A is minimal, if ∀ b, b ≤ a implies b ≅ a
 
+** join/meet
+
+	 A join of A is that, a least element of the set of upper bounds for A (called least upper bound or supremum, sometimes)
+
+	 A meet of A is, a greatest element of the set of lower bounds for A (called greatest lower bound or infimum, sometimes)
+
+	 1. The syntax ∨A is a choice of one of the joins of A
+	 2. The syntax ∧A is a choice of one of the meets of A
+	 3. ∀ x ∈ X, ∨A ≤ x ⟹ A ≤ x
+	 4. ∀ x ∈ X, x ≤ ∧A ⟹ x ≤ A
+
+*** singleton has only one meet/join
+
+		∨{x} = ∧{x} = x
+
+*** empty set 
+
+		The ∨∅ called ⊥, if it existed, ⊥ ≤ x
+
+		The ∧∅ called ⊤, if it existed, x ≤ ⊤
+
 * poset (preoder free from powerset)
 
 	*poset* is an interesting instance, its the preorder free from a powerset of any set X
