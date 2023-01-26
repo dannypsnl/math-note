@@ -46,6 +46,44 @@
 
 		The ∧∅ called ⊤, if it existed, x ≤ ⊤
 
+** up/down set
+
+	 A up-set of A is { x ∈ X | A ≤ x }, written A↑
+
+	 Reversely, a down-set of A is { x ∈ X | x ≤ A }, written A↓
+
+	 Notice that, if write x↑ for x ∈ X, then it's {x}↑
+
+	 Reversely, x↓ = {x}↓
+
+** chain
+
+	 If ∀ x, y ∈ A, we have x ≤ y or y ≤ x, which means we always have relation result for any two elements, then we say A is a *chain*
+
+*** ω-chain
+
+		If a *chain* can be indexed by ℕ, it's a ω-chain
+
+*** anti-chain
+
+		If ∀ x, y ∈ A, x ≤ y ⟹  y ≤ x, A is a *anti-chain*
+
+** reflect order
+
+	 A function /f/ is said to *reflect order* if given any x, y ∈ X, f(x) ≤ f(y) ⟹  x ≤ y
+
+** order preserving
+
+	 A monotone function can also be said it's *order preserving*
+
+** function order
+
+	 We can also scale order to function,
+
+	 f ≤ g, if ∀ x ∈ X, f(x) ≤ g(x)
+
+	 where f, g : X → Y
+
 * poset (preoder free from powerset)
 
 	*poset* is an interesting instance, its the preorder free from a powerset of any set X
