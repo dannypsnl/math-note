@@ -1,11 +1,23 @@
 * preorder 預序
 
-	A preorder is a relation on set X, such that, two elements of x, y ∈ X we can discuss x ≤ y.
+	A preorder on a set X is a binary relation, such that, two elements of x, y ∈ X we can discuss x ≤ y.
+
+	preorder is reflexive and transitive.
  
 	The following definition are quite important for preorder, we will assume
 
 	- set X
 	- A ⊆ X 
+
+** preordered set
+
+	 A preordered set (X, ≤) is a set X equipped with a preorder
+
+** partial order
+
+	 A partial order is a preorder that anti-symmetric, a set equipped with a partial order called *poset*
+
+	 *poset* stands for partially ordered set
 
 ** upper/lower bound
 
@@ -108,11 +120,11 @@
 
 	 y ≤ y' ⟹  f(x, y) ≤ f(x, y')
 
-* poset (preoder free from powerset)
+* preoder free from powerset
 
-	*poset* is an interesting instance, its the preorder free from a powerset of any set X
+	A powerset of any set X is a free preorder, by the following
 
-	The ⊆ is the ≤ here, for any two elements of powerset a, b ∈ P(X)
+	The ⊆ is the ≤, for any two elements of powerset a, b ∈ P(X)
 	
 	- a ⋃ b is a ∨ b
 	- a ⋂ b is a ∧ b  
