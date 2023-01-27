@@ -1,5 +1,3 @@
 * math note
 
-** topology
-
-	 [[file:./topology.org]]
+[[https://dannypsnl.github.io/math-note/]]
