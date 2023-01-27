@@ -1,4 +1,5 @@
 * math note
 
+- [[file:./category.org]]
 - [[file:./topology.org]]
 - [[file:./preorder.org]]

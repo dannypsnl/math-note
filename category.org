@@ -1,0 +1,26 @@
+* TODO category theory
+
+** small category
+
+	 small category is a category such that all of its objects form a set and all of its morphisms form a set.
+
+* tranditional abstract algebra
+
+** group by category
+
+	 The group axioms can be formed by category thinking, that's a small-category that
+	 
+	 1. only has one object
+	 2. all morphisms are isomorphisms
+
+	 In this situtation, we have the following mapping
+
+  | category ℭ     | corrresponding group G |
+  |----------------+------------------------|
+  | morphisms in ℭ | elements of G          |
+  | ○ in ℭ         | ⋅ in G                 |
+  | 1ℭ             | e ∈ G                  |
+
+	 A more advanced idea is, viewing group as a list of operations (partially applied ~⋅ a~), with e as initial state
+
+	 Then the category diagram will just reflect the idea
