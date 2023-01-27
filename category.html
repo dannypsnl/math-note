@@ -245,124 +245,92 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org55e46bd">1. topology</a>
+<li><a href="#org2390305">1. <span class="todo TODO">TODO</span> category theory</a>
 <ul>
-<li><a href="#org1be9a4f">1.1. 定義</a>
-<ul>
-<li><a href="#org461c245">1.1.1. open set</a></li>
+<li><a href="#orgafc4efb">1.1. small category</a></li>
 </ul>
 </li>
-<li><a href="#org2843119">1.2. 實例</a>
+<li><a href="#org6efee77">2. tranditional abstract algebra</a>
 <ul>
-<li><a href="#orgd05b575">1.2.1. trivial topology</a></li>
-<li><a href="#orgd06b685">1.2.2. particular point topology 特定點拓墣</a></li>
-<li><a href="#org4b5e481">1.2.3. lower limit topology</a></li>
-</ul>
-</li>
+<li><a href="#orgae3bc72">2.1. group by category</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org55e46bd" class="outline-2">
-<h2 id="org55e46bd"><span class="section-number-2">1</span> topology</h2>
+<div id="outline-container-org2390305" class="outline-2">
+<h2 id="org2390305"><span class="section-number-2">1</span> <span class="todo TODO">TODO</span> category theory</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org1be9a4f" class="outline-3">
-<h3 id="org1be9a4f"><span class="section-number-3">1.1</span> 定義</h3>
+<div id="outline-container-orgafc4efb" class="outline-3">
+<h3 id="orgafc4efb"><span class="section-number-3">1.1</span> small category</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
-當一個集合 X 有一個伴隨 𝒯，𝒯 被稱為開集族，而 (X, 𝒯) 就是一個 topology
+small category is a category such that all of its objects form a set and all of its morphisms form a set.
 </p>
-
-<p>
-其中，𝒯 是所有開集(open set)的類(collection)
-</p>
-</div>
-
-<div id="outline-container-org461c245" class="outline-4">
-<h4 id="org461c245"><span class="section-number-4">1.1.1</span> open set</h4>
-<div class="outline-text-4" id="text-1-1-1">
-<p>
-open set 被定義為符合以下公理的，X 的子集合。以下用 N 指代 open set
-</p>
-
-<ul class="org-ul">
-<li>N ∈ 𝒯</li>
-<li>∅ is open</li>
-<li>X is open</li>
-<li>⋃ Nᵢ is open, where ᵢ ∈ Λ
-即便有無限多個 N 的聯合，也依然是 open</li>
-<li>⋂ Nᵢ is open, where ᵢ ∈ ℕ
-有限多個 N 的交集是 open</li>
-</ul>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org2843119" class="outline-3">
-<h3 id="org2843119"><span class="section-number-3">1.2</span> 實例</h3>
-<div class="outline-text-3" id="text-1-2">
-<p>
-有了定義，就可以看一些實際案例來確認自己知道怎麼操作這些公理
-</p>
+<div id="outline-container-org6efee77" class="outline-2">
+<h2 id="org6efee77"><span class="section-number-2">2</span> tranditional abstract algebra</h2>
+<div class="outline-text-2" id="text-2">
 </div>
-
-<div id="outline-container-orgd05b575" class="outline-4">
-<h4 id="orgd05b575"><span class="section-number-4">1.2.1</span> trivial topology</h4>
-<div class="outline-text-4" id="text-1-2-1">
+<div id="outline-container-orgae3bc72" class="outline-3">
+<h3 id="orgae3bc72"><span class="section-number-3">2.1</span> group by category</h3>
+<div class="outline-text-3" id="text-2-1">
 <p>
-trivial topology is (X, {∅, X}), of course, there has no-hard thing to check
-</p>
-</div>
-
-<ol class="org-ol">
-<li><a id="org2d23047"></a>special case<br />
-<div class="outline-text-5" id="text-1-2-1-1">
-<p>
-if we have X = ∅, then there has only one topology {∅} can fit
-</p>
-</div>
-</li>
-</ol>
-</div>
-
-<div id="outline-container-orgd06b685" class="outline-4">
-<h4 id="orgd06b685"><span class="section-number-4">1.2.2</span> particular point topology 特定點拓墣</h4>
-<div class="outline-text-4" id="text-1-2-2">
-<p>
-particular point topology is about a X and a particular point p ∈ X
-</p>
-
-<p>
-where topology 𝒯ₚ is { V | V = ∅ or p ∈ V }, of course, V ⊂ X
-</p>
-
-<p>
-To believe it, we have to run axiom checking(but without ∅, X is open, which is trivial)
+The group axioms can be formed by category thinking, that's a small-category that
 </p>
 
 <ol class="org-ol">
-<li>⋃ Nᵢ ∈ 𝒯ₚ
-<ul class="org-ul">
-<li>∀ᵢ . Nᵢ = ∅ ⟹  ⋃ Nᵢ = ∅</li>
-<li>否則任意 Nᵢ 都有 p ∈ Nᵢ，所以 p ∈ ⋃ Nᵢ，按照定義 ⋃ Nᵢ ∈ 𝒯ₚ</li>
-</ul></li>
-<li>⋂ Nᵢ ∈ 𝒯ₚ
-<ul class="org-ul">
-<li>∃ ᵢ . Nᵢ = ∅ 則整個 ⋂ Nᵢ = ∅</li>
-<li>否則全部 Nᵢ ≠ ∅，所以 Nᵢ 都有 p ∈ Nᵢ，於是 ⋂ Nᵢ 必然含有 p，於是按照定義 ⋂ Nᵢ ∈ 𝒯ₚ</li>
-</ul></li>
+<li>only has one object</li>
+<li>all morphisms are isomorphisms</li>
 </ol>
 
 <p>
-於是 (X, 𝒯ₚ) 是一個拓墣
+In this situtation, we have the following mapping
 </p>
-</div>
-</div>
 
-<div id="outline-container-org4b5e481" class="outline-4">
-<h4 id="org4b5e481"><span class="section-number-4">1.2.3</span> lower limit topology</h4>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">category ℭ</th>
+<th scope="col" class="org-left">corrresponding group G</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">morphisms in ℭ</td>
+<td class="org-left">elements of G</td>
+</tr>
+
+<tr>
+<td class="org-left">○ in ℭ</td>
+<td class="org-left">⋅ in G</td>
+</tr>
+
+<tr>
+<td class="org-left">1ℭ</td>
+<td class="org-left">e ∈ G</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+A more advanced idea is, viewing group as a list of operations (partially applied <code>⋅ a</code>), with e as initial state
+</p>
+
+<p>
+Then the category diagram will just reflect the idea
+</p>
 </div>
 </div>
 </div>
