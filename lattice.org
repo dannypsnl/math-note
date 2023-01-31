@@ -10,3 +10,19 @@
 * example
 
 ** ℝ 是 complete lattice
+
+	 令 ∞ 跟 -∞ 作為 top/bottom
+
+	 則在 ℝ ⋃ {∞} ⋃ {-∞} 中，∀r ∈ ℝ, -∞ ≤ r ≤ ∞
+
+	 並且可以推廣到任意閉區間 [r₁, r₂] ⊆ ℝ 跟 ℝ 的 order 結合會是 complete lattice
+	
+** 任意 set X 的 powerset 構成 complete lattice
+
+** (ℕ, |) 構成 complete lattice
+
+	 這是一個由整數與整除關係構成的 complete lattice
+
+	 m | n 表示 n = km，其中 n, m, k ∈ ℕ，也就是 n 被 m 整除的關係
+
+	 這個 complete lattice 中 meet(m, n) 是 lcm{m, n}，而 join(m, n) 是 gcd{m, n}
