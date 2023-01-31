@@ -1,0 +1,30 @@
+* simply typed lambda calculus
+
+	In this theory, we have p : P, says a term p and a type P.
+
+	Such judgement, says p is a proof/witness of P, and P is a proposition.
+
+* example
+
+** Q follows from P ∧ (P → Q)
+
+	 Proof in natural deduction
+
+	 1. P ∧ (P → Q) ⊢ P
+	 2. P ∧ (P → Q) ⊢ P → Q
+	 3. P, (P → Q) ⊢ Q
+
+	 In STLC view
+
+	 1. P ∧ (P → Q) is a pair ~a : (P, P → Q)~
+	 2. projection 1 is ~pr₁ a : P~,
+	 3. projection 2 is ~pr₂ a : P → Q~
+	 4. then we use application ~pr₂ a (pr₁ a) : Q~ to get final proof
+
+	 Above can be write as a function
+
+	 #+begin_src haskell
+	 proof : (P, P -> Q) -> Q
+	 proof (pr1, pr2) = pr2 pr1
+	 #+end_src
+

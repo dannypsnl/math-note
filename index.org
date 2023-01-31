@@ -1,6 +1,10 @@
 * math note
 
-- [[file:./category.org]]
-- [[file:./topology.org]]
-- [[file:./preorder.org]]
-- [[file:./lattice.org]]
+	 - [[file:./category.org]]
+	 - [[file:./topology.org]]
+	 - [[file:./preorder.org]]
+	 - [[file:./lattice.org]]
+
+** type theory
+
+	 + [[file:./stlc.org]]
