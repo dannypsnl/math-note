@@ -1,0 +1,12 @@
+* lattice
+
+	lattice 格的概念基於在 [file:./preorder.org] 介紹過的 poset (partial ordered set) 
+
+	1. 一個 lattice 是有有限 join/meet 的 poset
+	2. complete lattice 是有任意數量 join/meet 的 poset
+	3. 要是只有 meet 是有限的，就稱為 meet-semilattice
+	4. 或是 join 是有限的，稱為 join-semilattice
+
+* example
+
+** ℝ 是 complete lattice
