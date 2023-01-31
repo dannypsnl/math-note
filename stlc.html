@@ -245,92 +245,65 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgaab1e36">1. <span class="todo TODO">TODO</span> category theory</a>
+<li><a href="#org4836f61">1. simply typed lambda calculus</a></li>
+<li><a href="#org8b1e7ed">2. example</a>
 <ul>
-<li><a href="#org931f925">1.1. small category</a></li>
-</ul>
-</li>
-<li><a href="#orgf78fcbe">2. tranditional abstract algebra</a>
-<ul>
-<li><a href="#org534762c">2.1. group by category</a></li>
+<li><a href="#org1564427">2.1. Q follows from P ∧ (P → Q)</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgaab1e36" class="outline-2">
-<h2 id="orgaab1e36"><span class="section-number-2">1</span> <span class="todo TODO">TODO</span> category theory</h2>
+<div id="outline-container-org4836f61" class="outline-2">
+<h2 id="org4836f61"><span class="section-number-2">1</span> simply typed lambda calculus</h2>
 <div class="outline-text-2" id="text-1">
-</div>
-<div id="outline-container-org931f925" class="outline-3">
-<h3 id="org931f925"><span class="section-number-3">1.1</span> small category</h3>
-<div class="outline-text-3" id="text-1-1">
 <p>
-small category is a category such that all of its objects form a set and all of its morphisms form a set.
+In this theory, we have p : P, says a term p and a type P.
+</p>
+
+<p>
+Such judgement, says p is a proof/witness of P, and P is a proposition.
 </p>
 </div>
 </div>
-</div>
 
-<div id="outline-container-orgf78fcbe" class="outline-2">
-<h2 id="orgf78fcbe"><span class="section-number-2">2</span> tranditional abstract algebra</h2>
+<div id="outline-container-org8b1e7ed" class="outline-2">
+<h2 id="org8b1e7ed"><span class="section-number-2">2</span> example</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org534762c" class="outline-3">
-<h3 id="org534762c"><span class="section-number-3">2.1</span> group by category</h3>
+<div id="outline-container-org1564427" class="outline-3">
+<h3 id="org1564427"><span class="section-number-3">2.1</span> Q follows from P ∧ (P → Q)</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
-The group axioms can be formed by category thinking, that's a small-category that
+Proof in natural deduction
 </p>
 
 <ol class="org-ol">
-<li>only has one object</li>
-<li>all morphisms are isomorphisms</li>
+<li>P ∧ (P → Q) ⊢ P</li>
+<li>P ∧ (P → Q) ⊢ P → Q</li>
+<li>P, (P → Q) ⊢ Q</li>
 </ol>
 
 <p>
-In this situtation, we have the following mapping
+In STLC view
 </p>
 
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-
-
-<colgroup>
-<col  class="org-left" />
-
-<col  class="org-left" />
-</colgroup>
-<thead>
-<tr>
-<th scope="col" class="org-left">category ℭ</th>
-<th scope="col" class="org-left">corrresponding group G</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="org-left">morphisms in ℭ</td>
-<td class="org-left">elements of G</td>
-</tr>
-
-<tr>
-<td class="org-left">○ in ℭ</td>
-<td class="org-left">⋅ in G</td>
-</tr>
-
-<tr>
-<td class="org-left">1ℭ</td>
-<td class="org-left">e ∈ G</td>
-</tr>
-</tbody>
-</table>
+<ol class="org-ol">
+<li>P ∧ (P → Q) is a pair <code>a : (P, P → Q)</code></li>
+<li>projection 1 is <code>pr₁ a : P</code>,</li>
+<li>projection 2 is <code>pr₂ a : P → Q</code></li>
+<li>then we use application <code>pr₂ a (pr₁ a) : Q</code> to get final proof</li>
+</ol>
 
 <p>
-A more advanced idea is, viewing group as a list of operations (partially applied <code>⋅ a</code>), with e as initial state
+Above can be write as a function
 </p>
 
-<p>
-Then the category diagram will just reflect the idea
-</p>
+<div class="org-src-container">
+<pre class="src src-haskell">proof : (P, P -&gt; Q) -&gt; Q
+proof (pr1, pr2) = pr2 pr1
+</pre>
+</div>
 </div>
 </div>
 </div>
