@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-01-31 Tue 06:55 -->
+<!-- 2023-01-31 Tue 07:04 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
@@ -245,17 +245,19 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orga322437">1. lattice</a></li>
-<li><a href="#orga46f7e0">2. example</a>
+<li><a href="#org2587835">1. lattice</a></li>
+<li><a href="#orgf511f21">2. example</a>
 <ul>
-<li><a href="#orgdf65194">2.1. ℝ 是 complete lattice</a></li>
+<li><a href="#orga2acd81">2.1. ℝ 是 complete lattice</a></li>
+<li><a href="#org8c4bbc3">2.2. 任意 set X 的 powerset 構成 complete lattice</a></li>
+<li><a href="#orgaea78b5">2.3. (ℕ, |) 構成 complete lattice</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orga322437" class="outline-2">
-<h2 id="orga322437"><span class="section-number-2">1</span> lattice</h2>
+<div id="outline-container-org2587835" class="outline-2">
+<h2 id="org2587835"><span class="section-number-2">1</span> lattice</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 lattice 格的概念基於在 [<a href="./preorder.html">./preorder.html</a>] 介紹過的 poset (partial ordered set) 
@@ -270,17 +272,51 @@ lattice 格的概念基於在 [<a href="./preorder.html">./preorder.html</a>] �
 </div>
 </div>
 
-<div id="outline-container-orga46f7e0" class="outline-2">
-<h2 id="orga46f7e0"><span class="section-number-2">2</span> example</h2>
+<div id="outline-container-orgf511f21" class="outline-2">
+<h2 id="orgf511f21"><span class="section-number-2">2</span> example</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-orgdf65194" class="outline-3">
-<h3 id="orgdf65194"><span class="section-number-3">2.1</span> ℝ 是 complete lattice</h3>
+<div id="outline-container-orga2acd81" class="outline-3">
+<h3 id="orga2acd81"><span class="section-number-3">2.1</span> ℝ 是 complete lattice</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+令 ∞ 跟 -∞ 作為 top/bottom
+</p>
+
+<p>
+則在 ℝ ⋃ {∞} ⋃ {-∞} 中，∀r ∈ ℝ, -∞ ≤ r ≤ ∞
+</p>
+
+<p>
+並且可以推廣到任意閉區間 [r₁, r₂] ⊆ ℝ 跟 ℝ 的 order 結合會是 complete lattice
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8c4bbc3" class="outline-3">
+<h3 id="org8c4bbc3"><span class="section-number-3">2.2</span> 任意 set X 的 powerset 構成 complete lattice</h3>
+</div>
+
+<div id="outline-container-orgaea78b5" class="outline-3">
+<h3 id="orgaea78b5"><span class="section-number-3">2.3</span> (ℕ, |) 構成 complete lattice</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+這是一個由整數與整除關係構成的 complete lattice
+</p>
+
+<p>
+m | n 表示 n = km，其中 n, m, k ∈ ℕ，也就是 n 被 m 整除的關係
+</p>
+
+<p>
+這個 complete lattice 中 meet(m, n) 是 lcm{m, n}，而 join(m, n) 是 gcd{m, n}
+</p>
+</div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Created: 2023-01-31 Tue 06:55</p>
+<p class="date">Created: 2023-01-31 Tue 07:04</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
