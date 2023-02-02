@@ -245,72 +245,77 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgcc57c04">1. lattice</a></li>
-<li><a href="#org152e9f2">2. example</a>
+<li><a href="#orgdc88bd0">1. logic</a>
 <ul>
-<li><a href="#org4b98a3a">2.1. ℝ 是 complete lattice</a></li>
-<li><a href="#org376aafb">2.2. 任意 set X 的 powerset 構成 complete lattice</a></li>
-<li><a href="#org76abcc3">2.3. (ℕ, |) 構成 complete lattice</a></li>
+<li><a href="#org924eb48">1.1. M₀ minimal logic</a></li>
+<li><a href="#org5db222f">1.2. J₀ intuitionistic logic</a></li>
+<li><a href="#orgbd746f6">1.3. K₀ classical logic</a></li>
+</ul>
+</li>
+<li><a href="#orgc1007cf">2. Derivation</a>
+<ul>
+<li><a href="#org1d25605">2.1. Proposition 1</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgcc57c04" class="outline-2">
-<h2 id="orgcc57c04"><span class="section-number-2">1</span> lattice</h2>
+<div id="outline-container-orgdc88bd0" class="outline-2">
+<h2 id="orgdc88bd0"><span class="section-number-2">1</span> logic</h2>
 <div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org924eb48" class="outline-3">
+<h3 id="org924eb48"><span class="section-number-3">1.1</span> M₀ minimal logic</h3>
+</div>
+
+<div id="outline-container-org5db222f" class="outline-3">
+<h3 id="org5db222f"><span class="section-number-3">1.2</span> J₀ intuitionistic logic</h3>
+</div>
+
+<div id="outline-container-orgbd746f6" class="outline-3">
+<h3 id="orgbd746f6"><span class="section-number-3">1.3</span> K₀ classical logic</h3>
+</div>
+</div>
+
+<div id="outline-container-orgc1007cf" class="outline-2">
+<h2 id="orgc1007cf"><span class="section-number-2">2</span> Derivation</h2>
+<div class="outline-text-2" id="text-2">
 <p>
-lattice 格的概念基於在 [<a href="./preorder.html">./preorder.html</a>] 介紹過的 poset (partial ordered set) 
+The definition is a formula <code>C</code> is <i>derivable</i> in calculi M₀, J₀, or K₀ from a set Γ of assumptions.
 </p>
 
 <ol class="org-ol">
-<li>一個 lattice 是有有限 join/meet 的 poset</li>
-<li>complete lattice 是有任意數量 join/meet 的 poset</li>
-<li>要是只有 meet 是有限的，就稱為 meet-semilattice</li>
-<li>或是 join 是有限的，稱為 join-semilattice</li>
+<li>assumptions Γ are a finite sequence of formulas A₁, &#x2026;, Aₙ</li>
+<li>for each 1 ≤ i ≤ n, Aᵢ is one of
+<ol class="org-ol">
+<li>axiom of calculi</li>
+<li>formula</li>
+<li>can be obtained by modus ponens from several Aⱼ (where j &lt; i)</li>
+</ol></li>
+<li>Aₙ = C (the final formula is the target)</li>
 </ol>
-</div>
+
+<p>
+We say that A₁, &#x2026;, Aₙ is a <i>derivation</i> of C
+</p>
+
+<p>
+We can write Γ ⊢ C
+</p>
 </div>
 
-<div id="outline-container-org152e9f2" class="outline-2">
-<h2 id="org152e9f2"><span class="section-number-2">2</span> example</h2>
-<div class="outline-text-2" id="text-2">
-</div>
-<div id="outline-container-org4b98a3a" class="outline-3">
-<h3 id="org4b98a3a"><span class="section-number-3">2.1</span> ℝ 是 complete lattice</h3>
+<div id="outline-container-org1d25605" class="outline-3">
+<h3 id="org1d25605"><span class="section-number-3">2.1</span> Proposition 1</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
-令 ∞ 跟 -∞ 作為 top/bottom
+If Γ ⊢ B and Δ ⊢ B ⥰ C, then Γ⋃Δ ⊢ C
 </p>
 
-<p>
-則在 ℝ ⋃ {∞} ⋃ {-∞} 中，∀r ∈ ℝ, -∞ ≤ r ≤ ∞
-</p>
-
-<p>
-並且可以推廣到任意閉區間 [r₁, r₂] ⊆ ℝ 跟 ℝ 的 order 結合會是 complete lattice
-</p>
-</div>
-</div>
-
-<div id="outline-container-org376aafb" class="outline-3">
-<h3 id="org376aafb"><span class="section-number-3">2.2</span> 任意 set X 的 powerset 構成 complete lattice</h3>
-</div>
-
-<div id="outline-container-org76abcc3" class="outline-3">
-<h3 id="org76abcc3"><span class="section-number-3">2.3</span> (ℕ, |) 構成 complete lattice</h3>
-<div class="outline-text-3" id="text-2-3">
-<p>
-這是一個由整數與整除關係構成的 complete lattice
-</p>
-
-<p>
-m | n 表示 n = km，其中 n, m, k ∈ ℕ，也就是 n 被 m 整除的關係
-</p>
-
-<p>
-這個 complete lattice 中 meet(m, n) 是 lcm{m, n}，而 join(m, n) 是 gcd{m, n}
-</p>
+<ol class="org-ol">
+<li>By definition, Γ has final assumption Bₙ = B</li>
+<li>Δ has final assumption Cₘ = B ⥰ C</li>
+<li>Thus, Γ⋃Δ has enough information to produce C, by Bₙ (B) and Cₘ (B ⥰ C)</li>
+</ol>
 </div>
 </div>
 </div>
