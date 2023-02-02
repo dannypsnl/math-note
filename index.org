@@ -1,10 +1,11 @@
 * math note
 
-	 - [[file:./category.org]]
-	 - [[file:./topology.org]]
-	 - [[file:./preorder.org]]
-	 - [[file:./lattice.org]]
+	 - [[file:./category.org][Category]]
+	 - [[file:./topology.org][Topology]]
+	 - [[file:./preorder.org][Preorder]]
+	 - [[file:./lattice.org][Lattice]]
+	 - [[file:./logic.org][Logic]]
 
 ** type theory
 
-	 + [[file:./stlc.org]]
+	 + [[file:./stlc.org][simply typed lambda calculus]]

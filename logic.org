@@ -1,0 +1,31 @@
+* logic
+
+** M₀ minimal logic
+
+** J₀ intuitionistic logic
+
+** K₀ classical logic
+
+* Derivation
+
+	 The definition is a formula ~C~ is /derivable/ in calculi M₀, J₀, or K₀ from a set Γ of assumptions.
+
+	 1. assumptions Γ are a finite sequence of formulas A₁, ..., Aₙ
+	 2. for each 1 ≤ i ≤ n, Aᵢ is one of
+			1. axiom of calculi
+			2. formula
+			3. can be obtained by modus ponens from several Aⱼ (where j < i)
+	 3. Aₙ = C (the final formula is the target)
+
+	 We say that A₁, ..., Aₙ is a /derivation/ of C
+
+	 We can write Γ ⊢ C
+
+** Proposition 1
+
+	 If Γ ⊢ B and Δ ⊢ B ⥰ C, then Γ⋃Δ ⊢ C
+
+	 1. By definition, Γ has final assumption Bₙ = B
+	 2. Δ has final assumption Cₘ = B ⥰ C
+	 3. Thus, Γ⋃Δ has enough information to produce C, by Bₙ (B) and Cₘ (B ⥰ C)
+
