@@ -4,6 +4,35 @@
 
 	Such judgement, says p is a proof/witness of P, and P is a proposition.
 
+	A term records the shape of proof tree
+
+** Rule →
+
+	 If we have type P, Q then we can form a type P → Q
+
+	 1. form, what we just say we can write a type P → Q is formation rule
+	 2. elim
+
+			#+begin_src haskell
+			elim : P -> (P -> Q) -> Q
+			elim p f = f p
+			#+end_src
+
+	 3. intro
+
+			#+begin_src haskell
+			-- notice that, assumption x : P (by it's just a parameter)
+			-- and subtitution q[arg/x] : Q
+			--
+			-- we will write x : P ⊢ q : Q
+			intro : P -> Q
+			intro = \x -> q
+			#+end_src
+
+			Here, ~q~ is an expression that might involve x somewhere, for example ~q~ is ~x * x~ (inforamlly, STΛC has no operator of course)
+
+	 4. compute
+
 * example
 
 ** Q follows from P ∧ (P → Q)
@@ -28,3 +57,15 @@
 	 proof (pr1, pr2) = pr2 pr1
 	 #+end_src
 
+** prove (P ∧ Q) → P
+
+	 1. hypothesis ~a : (P, Q)~
+	 2. and we know under that we have ~pr₁ a : P~
+	 3. then we can introduce the construction of the type ~λ a. pr₁ a : (P, Q) → P~
+
+	 The fun part should be introduce the construction is introduce the witness
+
+* note
+
+** There is an interpretation of STΛC intos Set (Lambek 1985)
+** There is an equivalence between STΛC and CCC

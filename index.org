@@ -8,4 +8,4 @@
 
 ** type theory
 
-	 + [[file:./stlc.org][simply typed lambda calculus]]
+	 + [[file:./stlc.org][STΛC]]
