@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-02-02 Thu 13:11 -->
+<!-- 2023-02-03 Fri 10:13 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
@@ -245,17 +245,28 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org285072f">1. simply typed lambda calculus</a></li>
-<li><a href="#org6abb823">2. example</a>
+<li><a href="#orgf0ce1a3">1. simply typed lambda calculus</a>
 <ul>
-<li><a href="#org031e1df">2.1. Q follows from P ∧ (P → Q)</a></li>
+<li><a href="#org28bd192">1.1. Rule →</a></li>
+</ul>
+</li>
+<li><a href="#orga9084d1">2. example</a>
+<ul>
+<li><a href="#org3df36f7">2.1. Q follows from P ∧ (P → Q)</a></li>
+<li><a href="#org73f4734">2.2. prove (P ∧ Q) → P</a></li>
+</ul>
+</li>
+<li><a href="#org8f024c2">3. note</a>
+<ul>
+<li><a href="#org156bcf6">3.1. There is an interpretation of STΛC intos Set (Lambek 1985)</a></li>
+<li><a href="#org202c1bc">3.2. There is an equivalence between STΛC and CCC</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org285072f" class="outline-2">
-<h2 id="org285072f"><span class="section-number-2">1</span> simply typed lambda calculus</h2>
+<div id="outline-container-orgf0ce1a3" class="outline-2">
+<h2 id="orgf0ce1a3"><span class="section-number-2">1</span> simply typed lambda calculus</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 In this theory, we have p : P, says a term p and a type P.
@@ -265,14 +276,56 @@ In this theory, we have p : P, says a term p and a type P.
 Such judgement, says p is a proof/witness of P, and P is a proposition.
 </p>
 </div>
+
+<div id="outline-container-org28bd192" class="outline-3">
+<h3 id="org28bd192"><span class="section-number-3">1.1</span> Rule →</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+If we have type P, Q then we can form a type P → Q
+</p>
+
+<ol class="org-ol">
+<li>form, what we just say we can write a type P → Q is formation rule</li>
+<li><p>
+elim
+</p>
+
+<div class="org-src-container">
+<pre class="src src-haskell">elim : P -&gt; (P -&gt; Q) -&gt; Q
+elim p f = f p
+</pre>
+</div></li>
+
+<li><p>
+intro
+</p>
+
+<div class="org-src-container">
+<pre class="src src-haskell">-- notice that, assumption x : P (by it's just a parameter)
+-- and subtitution q[arg/x] : Q
+--
+-- we will write x : P ⊢ q : Q
+intro : P -&gt; Q
+intro = \x -&gt; q
+</pre>
 </div>
 
-<div id="outline-container-org6abb823" class="outline-2">
-<h2 id="org6abb823"><span class="section-number-2">2</span> example</h2>
+<p>
+Here, <code>q</code> is an expression that might involve x somewhere, for example <code>q</code> is <code>x * x</code> (inforamlly, STΛC has no operator of course)
+</p></li>
+
+<li>compute</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga9084d1" class="outline-2">
+<h2 id="orga9084d1"><span class="section-number-2">2</span> example</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org031e1df" class="outline-3">
-<h3 id="org031e1df"><span class="section-number-3">2.1</span> Q follows from P ∧ (P → Q)</h3>
+<div id="outline-container-org3df36f7" class="outline-3">
+<h3 id="org3df36f7"><span class="section-number-3">2.1</span> Q follows from P ∧ (P → Q)</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 Proof in natural deduction
@@ -306,10 +359,37 @@ proof (pr1, pr2) = pr2 pr1
 </div>
 </div>
 </div>
+
+<div id="outline-container-org73f4734" class="outline-3">
+<h3 id="org73f4734"><span class="section-number-3">2.2</span> prove (P ∧ Q) → P</h3>
+<div class="outline-text-3" id="text-2-2">
+<ol class="org-ol">
+<li>hypothesis <code>a : (P, Q)</code></li>
+<li>and we know under that we have <code>pr₁ a : P</code></li>
+<li>then we can introduce the construction of the type <code>λ a. pr₁ a : (P, Q) → P</code></li>
+</ol>
+
+<p>
+The fun part should be introduce the construction is introduce the witness
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8f024c2" class="outline-2">
+<h2 id="org8f024c2"><span class="section-number-2">3</span> note</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org156bcf6" class="outline-3">
+<h3 id="org156bcf6"><span class="section-number-3">3.1</span> There is an interpretation of STΛC intos Set (Lambek 1985)</h3>
+</div>
+<div id="outline-container-org202c1bc" class="outline-3">
+<h3 id="org202c1bc"><span class="section-number-3">3.2</span> There is an equivalence between STΛC and CCC</h3>
+</div>
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Created: 2023-02-02 Thu 13:11</p>
+<p class="date">Created: 2023-02-03 Fri 10:13</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
