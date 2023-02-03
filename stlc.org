@@ -33,6 +33,12 @@
 
 	 4. compute
 
+*** Meta
+
+	⊢ is an external implication, and → is an internal implication
+
+	Therefore, the assumption x : P will disappeared after turnstile. From implementation view, it's like the thing is checked external then not doing it again in the system itself.
+
 * example
 
 ** Q follows from P ∧ (P → Q)
