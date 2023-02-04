@@ -1,9 +1,24 @@
-* TODO category theory
+* category theory
 
 ** small category
 
 	 small category is a category such that all of its objects form a set and all of its morphisms form a set.
 
+** product category
+
+	 For any two categories 𝒜, ℬ, we can build a product of them as a category, write as 𝒜×ℬ
+
+	 𝒪𝒷(𝒜×ℬ) = 𝒪𝒷(𝒜) × 𝒪𝒷(ℬ)
+	 (𝒜×ℬ)((A, B), (A', B')) = 𝒜(A, A') × ℬ(B, B')
+
+	 As well, we define ∘ as
+
+	 (f, g) ∘ (h, j) = (f∘h, g∘j)
+
+	 and define identity of (A, B) as
+
+	 1(A, B) = (1A, 1B)
+	
 * tranditional abstract algebra
 
 ** group by category
@@ -24,3 +39,24 @@
 	 A more advanced idea is, viewing group as a list of operations (partially applied ~⋅ a~), with e as initial state
 
 	 Then the category diagram will just reflect the idea
+
+* Functor
+
+	A functor ~F : 𝒜 → ℬ~ consists
+
+	1. function makes 𝒪𝒷(𝒜) to 𝒪𝒷(ℬ), write as A ⟶  F(A)
+	2. for every morphism ~f : A → A'~ in 𝒜, makes corrresponding morphism in ℬ, write as f ⟶  F(f)
+	3. composition of morphism are preserved
+	4. identities are preserved
+
+** Free functor (informal term)
+
+	Given any set ~S~, one can build the *free group* ~F(S)~ on ~S~. For example, said ~S = {x, y, z}~, insert ~e~, ~x⁻¹~, ~y⁻¹~, ~z⁻¹~ makes a group (informally). Just like we have in mind, ~x ⋅ x⁻¹ = e~, and so on. This group is the *free group* of ~{x, y, z}~. On the other hand, this ~F~ became a functor, from *Set* to *Grp*. Maps of sets ~S~, ~S'~, rise to a homomorphism of groups.
+
+	The same can be done for *Set* to *Vectₖ*, *Set* to *CRing*, and many. Such thing is what we called free functor, informally.
+
+** Definition: presheaf
+
+	 A presheaf on category 𝔄 is a functor 𝔄ᵒᵖ → *Set*
+
+** TODO Definition: faithful

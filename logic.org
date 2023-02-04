@@ -27,5 +27,5 @@
 
 	 1. By definition, Γ has final assumption Bₙ = B
 	 2. Δ has final assumption Cₘ = B ⥰ C
-	 3. Thus, Γ⋃Δ has enough information to produce C, by Bₙ (B) and Cₘ (B ⥰ C)
+	 3. Thus, Γ⋃Δ has enough information to produce C, by Bₙ is B and Cₘ is B ⥰ C
 
