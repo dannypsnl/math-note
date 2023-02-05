@@ -5,6 +5,7 @@
 	 - [[file:./preorder.org][Preorder]]
 	 - [[file:./lattice.org][Lattice]]
 	 - [[file:./logic.org][Logic]]
+	 - [[file:./sequence.org][Sequence]]
 
 ** type theory
 
