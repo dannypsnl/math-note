@@ -13,3 +13,11 @@
 		      Γ ⊢ P ∧ Q
 
 	+ for now, type is proposition, program, sets
+	
+** corresponding
+
+	 + Π is ∀
+	 + Σ is ∃
+	 + Σ but no dependent occurs, is the product, the A ∧ B or A × B
+	 + Π but no dependent occurs, is the function type or implies, the A → B
+
