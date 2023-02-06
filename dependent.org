@@ -1,0 +1,15 @@
+* dependent type
+
+	+ In STΛC, terms depend on terms
+	+ In dependent type theory, not only terms, but types can depend on terms.
+	+ ~n : ℕ ⊢ isEven(n)~
+
+	Rules are similar as STΛC, but formation (construct types) now also has context
+
+	+ Λ-form now is
+
+		Γ ⊢ P : Type, Γ ⊢ Q : Type
+		--------------------------
+		      Γ ⊢ P ∧ Q
+
+	+ for now, type is proposition, program, sets

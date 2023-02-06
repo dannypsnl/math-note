@@ -10,3 +10,5 @@
 ** type theory
 
 	 + [[file:./stlc.org][STΛC]]
+	 + [[file:./dependent.org][Dependent Type]]
+
