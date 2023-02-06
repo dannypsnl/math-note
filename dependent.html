@@ -245,318 +245,37 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org612c956">1. preorder 預序</a>
-<ul>
-<li><a href="#orga4d4c21">1.1. preordered set</a></li>
-<li><a href="#org1574ffb">1.2. partial order</a></li>
-<li><a href="#orgfe7466c">1.3. upper/lower bound</a></li>
-<li><a href="#org95349cf">1.4. greatest/least element</a></li>
-<li><a href="#orgff21c1c">1.5. maximal/minimal</a></li>
-<li><a href="#orgb024e49">1.6. join/meet</a>
-<ul>
-<li><a href="#orgc39d336">1.6.1. singleton has only one meet/join</a></li>
-<li><a href="#org50e6882">1.6.2. empty set</a></li>
-</ul>
-</li>
-<li><a href="#org3ecce17">1.7. up/down set</a></li>
-<li><a href="#orgc9bc2ec">1.8. chain</a>
-<ul>
-<li><a href="#org1c56154">1.8.1. ω-chain</a></li>
-<li><a href="#org60ca70a">1.8.2. anti-chain</a></li>
-</ul>
-</li>
-<li><a href="#org6eb393a">1.9. reflect order</a></li>
-<li><a href="#org16ceeb2">1.10. order preserving</a></li>
-<li><a href="#orgb08d04d">1.11. function order</a></li>
-</ul>
-</li>
-<li><a href="#org0014252">2. proposition</a>
-<ul>
-<li><a href="#orgf07070a">2.1. Identity function on any preordered set is monotone</a></li>
-<li><a href="#org2e035f4">2.2. Composition of two monotone functions is monotone</a></li>
-<li><a href="#orgcd337f1">2.3. Compose function between preordered sets is monotone</a></li>
-<li><a href="#org603aad4">2.4. f : X × Y → Z is monotone, if it's monotone in each variable separately</a></li>
-</ul>
-</li>
-<li><a href="#org14300b7">3. preoder free from powerset</a></li>
+<li><a href="#orgfe550ef">1. dependent type</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org612c956" class="outline-2">
-<h2 id="org612c956"><span class="section-number-2">1</span> preorder 預序</h2>
+<div id="outline-container-orgfe550ef" class="outline-2">
+<h2 id="orgfe550ef"><span class="section-number-2">1</span> dependent type</h2>
 <div class="outline-text-2" id="text-1">
-<p>
-A preorder on a set X is a binary relation, such that, two elements of x, y ∈ X we can discuss x ≤ y.
-</p>
-
-<p>
-preorder is reflexive and transitive.
-</p>
-
-<p>
-The following definition are quite important for preorder, we will assume
-</p>
-
 <ul class="org-ul">
-<li>set X</li>
-<li>A ⊆ X</li>
+<li>In STΛC, terms depend on terms</li>
+<li>In dependent type theory, not only terms, but types can depend on terms.</li>
+<li><code>n : ℕ ⊢ isEven(n)</code></li>
 </ul>
-</div>
-
-<div id="outline-container-orga4d4c21" class="outline-3">
-<h3 id="orga4d4c21"><span class="section-number-3">1.1</span> preordered set</h3>
-<div class="outline-text-3" id="text-1-1">
-<p>
-A preordered set (X, ≤) is a set X equipped with a preorder
-</p>
-</div>
-</div>
-
-<div id="outline-container-org1574ffb" class="outline-3">
-<h3 id="org1574ffb"><span class="section-number-3">1.2</span> partial order</h3>
-<div class="outline-text-3" id="text-1-2">
-<p>
-A partial order is a preorder that anti-symmetric, a set equipped with a partial order called <b>poset</b>
-</p>
 
 <p>
-<b>poset</b> stands for partially ordered set
-</p>
-</div>
-</div>
-
-<div id="outline-container-orgfe7466c" class="outline-3">
-<h3 id="orgfe7466c"><span class="section-number-3">1.3</span> upper/lower bound</h3>
-<div class="outline-text-3" id="text-1-3">
-<p>
-An element x ∈ X is an upper bound of A, iff ∀ a ∈ A, a ≤ x
-</p>
-
-<p>
-Reversely, x ∈ X is a lower bound of A, iff ∀ a ∈ A, x ≤ a
-</p>
-</div>
-</div>
-
-<div id="outline-container-org95349cf" class="outline-3">
-<h3 id="org95349cf"><span class="section-number-3">1.4</span> greatest/least element</h3>
-<div class="outline-text-3" id="text-1-4">
-<p>
-An upper bound x of A is the greatest element iff x ∈ A
-</p>
-
-<p>
-Reversely, lower bound x of A is the least element iff x ∈ A
-</p>
-</div>
-</div>
-
-<div id="outline-container-orgff21c1c" class="outline-3">
-<h3 id="orgff21c1c"><span class="section-number-3">1.5</span> maximal/minimal</h3>
-<div class="outline-text-3" id="text-1-5">
-<p>
-An element a ∈ A is maximal, if ∀ b, a ≤ b implies a ≅ b
-</p>
-
-<p>
-Reversely, a ∈ A is minimal, if ∀ b, b ≤ a implies b ≅ a
-</p>
-</div>
-</div>
-
-<div id="outline-container-orgb024e49" class="outline-3">
-<h3 id="orgb024e49"><span class="section-number-3">1.6</span> join/meet</h3>
-<div class="outline-text-3" id="text-1-6">
-<p>
-A join of A is that, a least element of the set of upper bounds for A (called least upper bound or supremum, sometimes)
-</p>
-
-<p>
-A meet of A is, a greatest element of the set of lower bounds for A (called greatest lower bound or infimum, sometimes)
-</p>
-
-<ol class="org-ol">
-<li>The syntax ∨A is a choice of one of the joins of A</li>
-<li>The syntax ∧A is a choice of one of the meets of A</li>
-<li>∀ x ∈ X, ∨A ≤ x ⟹ A ≤ x</li>
-<li>∀ x ∈ X, x ≤ ∧A ⟹ x ≤ A</li>
-</ol>
-</div>
-
-<div id="outline-container-orgc39d336" class="outline-4">
-<h4 id="orgc39d336"><span class="section-number-4">1.6.1</span> singleton has only one meet/join</h4>
-<div class="outline-text-4" id="text-1-6-1">
-<p>
-∨{x} = ∧{x} = x
-</p>
-</div>
-</div>
-
-<div id="outline-container-org50e6882" class="outline-4">
-<h4 id="org50e6882"><span class="section-number-4">1.6.2</span> empty set</h4>
-<div class="outline-text-4" id="text-1-6-2">
-<p>
-The ∨∅ called ⊥, if it existed, ⊥ ≤ x
-</p>
-
-<p>
-The ∧∅ called ⊤, if it existed, x ≤ ⊤
-</p>
-</div>
-</div>
-</div>
-
-<div id="outline-container-org3ecce17" class="outline-3">
-<h3 id="org3ecce17"><span class="section-number-3">1.7</span> up/down set</h3>
-<div class="outline-text-3" id="text-1-7">
-<p>
-A up-set of A is { x ∈ X | A ≤ x }, written A↑
-</p>
-
-<p>
-Reversely, a down-set of A is { x ∈ X | x ≤ A }, written A↓
-</p>
-
-<p>
-Notice that, if write x↑ for x ∈ X, then it's {x}↑
-</p>
-
-<p>
-Reversely, x↓ = {x}↓
-</p>
-</div>
-</div>
-
-<div id="outline-container-orgc9bc2ec" class="outline-3">
-<h3 id="orgc9bc2ec"><span class="section-number-3">1.8</span> chain</h3>
-<div class="outline-text-3" id="text-1-8">
-<p>
-If ∀ x, y ∈ A, we have x ≤ y or y ≤ x, which means we always have relation result for any two elements, then we say A is a <b>chain</b>
-</p>
-</div>
-
-<div id="outline-container-org1c56154" class="outline-4">
-<h4 id="org1c56154"><span class="section-number-4">1.8.1</span> ω-chain</h4>
-<div class="outline-text-4" id="text-1-8-1">
-<p>
-If a <b>chain</b> can be indexed by ℕ, it's a ω-chain
-</p>
-</div>
-</div>
-
-<div id="outline-container-org60ca70a" class="outline-4">
-<h4 id="org60ca70a"><span class="section-number-4">1.8.2</span> anti-chain</h4>
-<div class="outline-text-4" id="text-1-8-2">
-<p>
-If ∀ x, y ∈ A, x ≤ y ⟹  y ≤ x, A is a <b>anti-chain</b>
-</p>
-</div>
-</div>
-</div>
-
-<div id="outline-container-org6eb393a" class="outline-3">
-<h3 id="org6eb393a"><span class="section-number-3">1.9</span> reflect order</h3>
-<div class="outline-text-3" id="text-1-9">
-<p>
-A function <i>f</i> is said to <b>reflect order</b> if given any x, y ∈ X, f(x) ≤ f(y) ⟹  x ≤ y
-</p>
-</div>
-</div>
-
-<div id="outline-container-org16ceeb2" class="outline-3">
-<h3 id="org16ceeb2"><span class="section-number-3">1.10</span> order preserving</h3>
-<div class="outline-text-3" id="text-1-10">
-<p>
-A monotone function can also be said it's <b>order preserving</b>
-</p>
-</div>
-</div>
-
-<div id="outline-container-orgb08d04d" class="outline-3">
-<h3 id="orgb08d04d"><span class="section-number-3">1.11</span> function order</h3>
-<div class="outline-text-3" id="text-1-11">
-<p>
-We can also scale order to function,
-</p>
-
-<p>
-f ≤ g, if ∀ x ∈ X, f(x) ≤ g(x)
-</p>
-
-<p>
-where f, g : X → Y
-</p>
-</div>
-</div>
-</div>
-
-<div id="outline-container-org0014252" class="outline-2">
-<h2 id="org0014252"><span class="section-number-2">2</span> proposition</h2>
-<div class="outline-text-2" id="text-2">
-</div>
-<div id="outline-container-orgf07070a" class="outline-3">
-<h3 id="orgf07070a"><span class="section-number-3">2.1</span> Identity function on any preordered set is monotone</h3>
-</div>
-<div id="outline-container-org2e035f4" class="outline-3">
-<h3 id="org2e035f4"><span class="section-number-3">2.2</span> Composition of two monotone functions is monotone</h3>
-</div>
-<div id="outline-container-orgcd337f1" class="outline-3">
-<h3 id="orgcd337f1"><span class="section-number-3">2.3</span> Compose function between preordered sets is monotone</h3>
-<div class="outline-text-3" id="text-2-3">
-<p>
-Consider X, Y, Z be preordered sets
-</p>
-
-<p>
-○ : (Y -&gt; Z) × (X -&gt; Y) → (X → Z)
-</p>
-
-<p>
-○ (g, f) = λ x . g (f x)
-</p>
-
-<p>
-The compose function ○ is monotone between preordered sets
-</p>
-</div>
-</div>
-
-<div id="outline-container-org603aad4" class="outline-3">
-<h3 id="org603aad4"><span class="section-number-3">2.4</span> f : X × Y → Z is monotone, if it's monotone in each variable separately</h3>
-<div class="outline-text-3" id="text-2-4">
-<p>
-details, it said
-</p>
-
-<p>
-x ≤ x' ⟹  f(x, y) ≤ f(x', y)
-</p>
-
-<p>
-and
-</p>
-
-<p>
-y ≤ y' ⟹  f(x, y) ≤ f(x, y')
-</p>
-</div>
-</div>
-</div>
-
-<div id="outline-container-org14300b7" class="outline-2">
-<h2 id="org14300b7"><span class="section-number-2">3</span> preoder free from powerset</h2>
-<div class="outline-text-2" id="text-3">
-<p>
-A powerset of any set X is a free preorder, by the following
-</p>
-
-<p>
-The ⊆ is the ≤, for any two elements of powerset a, b ∈ P(X)
+Rules are similar as STΛC, but formation (construct types) now also has context
 </p>
 
 <ul class="org-ul">
-<li>a ⋃ b is a ∨ b</li>
-<li>a ⋂ b is a ∧ b</li>
+<li><p>
+Λ-form now is
+</p>
+
+<p>
+Γ ⊢ P : Type, Γ ⊢ Q : Type
+</p>
+<hr />
+<p>
+Γ ⊢ P ∧ Q
+</p></li>
+
+<li>for now, type is proposition, program, sets</li>
 </ul>
 </div>
 </div>
