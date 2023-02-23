@@ -1,4 +1,5 @@
-* sequence
+#+title: sequence
+#+html_link_home: index
 
 ** paper: Recounting the rationals
 

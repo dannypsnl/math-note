@@ -1,4 +1,6 @@
-* topology
+#+title: topology
+#+html_link_home: index
+
 ** 定義
 
 	 當一個集合 X 有一個伴隨 𝒯，𝒯 被稱為開集族，而 (X, 𝒯) 就是一個 topology

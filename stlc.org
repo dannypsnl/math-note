@@ -1,4 +1,5 @@
-* simply typed lambda calculus
+#+title: simply typed lambda calculus
+#+html_link_home: index
 
 	In this theory, we have p : P, says a term p and a type P.
 

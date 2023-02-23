@@ -1,4 +1,5 @@
-* logic
+#+title: logic
+#+html_link_home: index
 
 ** M₀ minimal logic
 

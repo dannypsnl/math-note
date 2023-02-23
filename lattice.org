@@ -1,4 +1,5 @@
-* lattice
+#+title: lattice
+#+html_link_home: index
 
 	lattice 格的概念基於在 [file:./preorder.org] 介紹過的 poset (partial ordered set) 
 

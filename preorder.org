@@ -1,4 +1,5 @@
-* preorder 預序
+#+title: preorder 預序
+#+html_link_home: index
 
 	A preorder on a set X is a binary relation, such that, two elements of x, y ∈ X we can discuss x ≤ y.
 

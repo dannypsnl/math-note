@@ -1,4 +1,5 @@
-* category theory
+#+title: category theory
+#+html_link_home: index
 
 ** small category
 
@@ -59,4 +60,4 @@
 
 	 A presheaf on category 𝔄 is a functor 𝔄ᵒᵖ → *Set*
 
-** TODO Definition: faithful
+** Definition: faithful
