@@ -1,5 +1,9 @@
 #+title: category theory
 #+html_link_home: index
+#+html_mathjax: align: left indent: 5em tagside: left
+#+header: :file img/contour.svg :imagemagick yes
+#+header: :results output silent :headers '("\\usepackage{tikz}")
+#+header: :fit yes :imoutoptions -geometry 400 :iminoptions -density 600
 
 ** small category
 
@@ -60,4 +64,12 @@
 
 	 A presheaf on category 𝔄 is a functor 𝔄ᵒᵖ → *Set*
 
-** Definition: faithful
+** TODO Definition: faithful
+
+* slice category
+
+	A slice category is about an object ~a~ and its category ~𝘼~.
+
+	This category would be write as ~𝘼/a~, which
+	1. objects are pair ~(b, f : b → a)~
+	2. morphisms are those morphisms of ~𝘼~ makes whatever ~g : b → b'~ makes ~f = f' g~, where ~f' : b' → a~
