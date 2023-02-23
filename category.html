@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-02-23 Thu 13:58 -->
+<!-- 2023-02-23 Thu 15:04 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>category theory</title>
@@ -250,26 +250,27 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org121c972">0.1. small category</a></li>
-<li><a href="#org2ebe9a1">0.2. product category</a></li>
+<li><a href="#org07d87fc">0.1. small category</a></li>
+<li><a href="#org57ccd5a">0.2. product category</a></li>
 </ul>
 </li>
-<li><a href="#org0ba832c">1. tranditional abstract algebra</a>
+<li><a href="#org407631d">1. tranditional abstract algebra</a>
 <ul>
-<li><a href="#orgd046b4f">1.1. group by category</a></li>
+<li><a href="#orgb59197e">1.1. group by category</a></li>
 </ul>
 </li>
-<li><a href="#org64a6e45">2. Functor</a>
+<li><a href="#org89088bb">2. Functor</a>
 <ul>
-<li><a href="#org80ea419">2.1. Free functor (informal term)</a></li>
-<li><a href="#org01860d7">2.2. Definition: presheaf</a></li>
-<li><a href="#org90a151b">2.3. Definition: faithful</a></li>
+<li><a href="#org6685c36">2.1. Free functor (informal term)</a></li>
+<li><a href="#org2bb9d35">2.2. Definition: presheaf</a></li>
+<li><a href="#org61e3768">2.3. <span class="todo TODO">TODO</span> Definition: faithful</a></li>
 </ul>
-</div>
+</li>
+<li><a href="#orgb077043">3. slice category</a></div>
 </div>
 
-<div id="outline-container-org121c972" class="outline-3">
-<h3 id="org121c972"><span class="section-number-3">0.1</span> small category</h3>
+<div id="outline-container-org07d87fc" class="outline-3">
+<h3 id="org07d87fc"><span class="section-number-3">0.1</span> small category</h3>
 <div class="outline-text-3" id="text-0-1">
 <p>
 small category is a category such that all of its objects form a set and all of its morphisms form a set.
@@ -277,8 +278,8 @@ small category is a category such that all of its objects form a set and all of 
 </div>
 </div>
 
-<div id="outline-container-org2ebe9a1" class="outline-3">
-<h3 id="org2ebe9a1"><span class="section-number-3">0.2</span> product category</h3>
+<div id="outline-container-org57ccd5a" class="outline-3">
+<h3 id="org57ccd5a"><span class="section-number-3">0.2</span> product category</h3>
 <div class="outline-text-3" id="text-0-2">
 <p>
 For any two categories 𝒜, ℬ, we can build a product of them as a category, write as 𝒜×ℬ
@@ -307,12 +308,12 @@ and define identity of (A, B) as
 </div>
 </div>
 
-<div id="outline-container-org0ba832c" class="outline-2">
-<h2 id="org0ba832c"><span class="section-number-2">1</span> tranditional abstract algebra</h2>
+<div id="outline-container-org407631d" class="outline-2">
+<h2 id="org407631d"><span class="section-number-2">1</span> tranditional abstract algebra</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-orgd046b4f" class="outline-3">
-<h3 id="orgd046b4f"><span class="section-number-3">1.1</span> group by category</h3>
+<div id="outline-container-orgb59197e" class="outline-3">
+<h3 id="orgb59197e"><span class="section-number-3">1.1</span> group by category</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 The group axioms can be formed by category thinking, that's a small-category that
@@ -370,8 +371,8 @@ Then the category diagram will just reflect the idea
 </div>
 </div>
 
-<div id="outline-container-org64a6e45" class="outline-2">
-<h2 id="org64a6e45"><span class="section-number-2">2</span> Functor</h2>
+<div id="outline-container-org89088bb" class="outline-2">
+<h2 id="org89088bb"><span class="section-number-2">2</span> Functor</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 A functor <code>F : 𝒜 → ℬ</code> consists
@@ -385,8 +386,8 @@ A functor <code>F : 𝒜 → ℬ</code> consists
 </ol>
 </div>
 
-<div id="outline-container-org80ea419" class="outline-3">
-<h3 id="org80ea419"><span class="section-number-3">2.1</span> Free functor (informal term)</h3>
+<div id="outline-container-org6685c36" class="outline-3">
+<h3 id="org6685c36"><span class="section-number-3">2.1</span> Free functor (informal term)</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 Given any set <code>S</code>, one can build the <b>free group</b> <code>F(S)</code> on <code>S</code>. For example, said <code>S = {x, y, z}</code>, insert <code>e</code>, <code>x⁻¹</code>, <code>y⁻¹</code>, <code>z⁻¹</code> makes a group (informally). Just like we have in mind, <code>x ⋅ x⁻¹ = e</code>, and so on. This group is the <b>free group</b> of <code>{x, y, z}</code>. On the other hand, this <code>F</code> became a functor, from <b>Set</b> to <b>Grp</b>. Maps of sets <code>S</code>, <code>S'</code>, rise to a homomorphism of groups.
@@ -398,8 +399,8 @@ The same can be done for <b>Set</b> to <b>Vectₖ</b>, <b>Set</b> to <b>CRing</b
 </div>
 </div>
 
-<div id="outline-container-org01860d7" class="outline-3">
-<h3 id="org01860d7"><span class="section-number-3">2.2</span> Definition: presheaf</h3>
+<div id="outline-container-org2bb9d35" class="outline-3">
+<h3 id="org2bb9d35"><span class="section-number-3">2.2</span> Definition: presheaf</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
 A presheaf on category 𝔄 is a functor 𝔄ᵒᵖ → <b>Set</b>
@@ -407,13 +408,30 @@ A presheaf on category 𝔄 is a functor 𝔄ᵒᵖ → <b>Set</b>
 </div>
 </div>
 
-<div id="outline-container-org90a151b" class="outline-3">
-<h3 id="org90a151b"><span class="section-number-3">2.3</span> Definition: faithful</h3>
+<div id="outline-container-org61e3768" class="outline-3">
+<h3 id="org61e3768"><span class="section-number-3">2.3</span> <span class="todo TODO">TODO</span> Definition: faithful</h3>
+</div>
+</div>
+
+<div id="outline-container-orgb077043" class="outline-2">
+<h2 id="orgb077043"><span class="section-number-2">3</span> slice category</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+A slice category is about an object <code>a</code> and its category <code>𝘼</code>.
+</p>
+
+<p>
+This category would be write as <code>𝘼/a</code>, which
+</p>
+<ol class="org-ol">
+<li>objects are pair <code>(b, f : b → a)</code></li>
+<li>morphisms are those morphisms of <code>𝘼</code> makes whatever <code>g : b → b'</code> makes <code>f = f' g</code>, where <code>f' : b' → a</code></li>
+</ol>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Created: 2023-02-23 Thu 13:58</p>
+<p class="date">Created: 2023-02-23 Thu 15:04</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
