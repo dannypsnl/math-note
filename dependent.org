@@ -11,16 +11,20 @@
 
 	+ Λ-form now is
 
-		Γ ⊢ P : Type, Γ ⊢ Q : Type
-		--------------------------
-		      Γ ⊢ P ∧ Q
+		\begin{equation}
+		\frac{
+			\Gamma \vdash P : Type, \Gamma \vdash Q : Type
+		}{
+			\Gamma \vdash P \land Q
+		}
+		\end{equation}
 
 	+ for now, type is proposition, program, sets
 	
 ** corresponding
 
-	 + Π is ∀
-	 + Σ is ∃
-	 + Σ but no dependent occurs, is the product, the A ∧ B or A × B
-	 + Π but no dependent occurs, is the function type or implies, the A → B
+	 + $\Pi$ is $\forall$
+	 + $\Sigma$ is $\exists$
+	 + $\Sigma$ but no dependent occurs, is the product, the $A \land B$ or $A \times B$
+	 + $\Pi$ but no dependent occurs, is the function type or implies, the $A \to B$
 
