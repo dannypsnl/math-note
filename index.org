@@ -1,5 +1,6 @@
 #+title: math note
 #+author: dannypsnl
+#+options: toc:nil
 
 * general
 
