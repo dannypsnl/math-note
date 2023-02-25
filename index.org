@@ -1,14 +1,20 @@
-* math note
+#+title: math note
+#+author: dannypsnl
 
-	 - [[file:./category.org][Category]]
-	 - [[file:./topology.org][Topology]]
-	 - [[file:./preorder.org][Preorder]]
-	 - [[file:./lattice.org][Lattice]]
-	 - [[file:./logic.org][Logic]]
-	 - [[file:./sequence.org][Sequence]]
+* general
+
+	- [[file:./category.org][Category]]
+	- [[file:./topology.org][Topology]]
+	- [[file:./sequence.org][Sequence]]
+	+ [[file:./preorder.org][Preorder]]
+	+ [[file:./lattice.org][Lattice]]
+
+* foundation
+
+	+ [[file:./logic.org][Logic]]
 
 ** type theory
 
-	 + [[file:./stlc.org][STΛC]]
-	 + [[file:./dependent.org][Dependent Type]]
+	+ [[file:./stlc.org][STΛC]]
+	+ [[file:./dependent.org][Dependent Type]]
 
