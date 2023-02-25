@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-02-25 Sat 18:28 -->
+<!-- 2023-02-25 Sat 18:32 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>dependent type</title>
@@ -54,6 +54,28 @@ for the JavaScript code in this tag.
  }
 /*]]>*///-->
 </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="org-div-home-and-up">
@@ -66,17 +88,17 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org1d62d8f">1. introduction</a>
+<li><a href="#orgacad7a0">1. introduction</a>
 <ul>
-<li><a href="#orga0bba01">1.1. corresponding</a></li>
+<li><a href="#org609d8b4">1.1. corresponding</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org1d62d8f" class="outline-2">
-<h2 id="org1d62d8f"><span class="section-number-2">1</span> introduction</h2>
+<div id="outline-container-orgacad7a0" class="outline-2">
+<h2 id="orgacad7a0"><span class="section-number-2">1</span> introduction</h2>
 <div class="outline-text-2" id="text-1">
 <ul class="org-ul">
 <li>In STΛC, terms depend on terms</li>
@@ -93,33 +115,33 @@ Rules are similar as STΛC, but formation (construct types) now also has context
 Λ-form now is
 </p>
 
-<p>
-Γ ⊢ P : Type, Γ ⊢ Q : Type
-</p>
-<hr />
-<p>
-Γ ⊢ P ∧ Q
-</p></li>
+\begin{equation}
+\frac{
+	\Gamma \vdash P : Type, \Gamma \vdash Q : Type
+}{
+	\Gamma \vdash P \land Q
+}
+\end{equation}</li>
 
 <li>for now, type is proposition, program, sets</li>
 </ul>
 </div>
 
-<div id="outline-container-orga0bba01" class="outline-3">
-<h3 id="orga0bba01"><span class="section-number-3">1.1</span> corresponding</h3>
+<div id="outline-container-org609d8b4" class="outline-3">
+<h3 id="org609d8b4"><span class="section-number-3">1.1</span> corresponding</h3>
 <div class="outline-text-3" id="text-1-1">
 <ul class="org-ul">
-<li>Π is ∀</li>
-<li>Σ is ∃</li>
-<li>Σ but no dependent occurs, is the product, the A ∧ B or A × B</li>
-<li>Π but no dependent occurs, is the function type or implies, the A → B</li>
+<li>\(\Pi\) is \(\forall\)</li>
+<li>\(\Sigma\) is \(\exists\)</li>
+<li>\(\Sigma\) but no dependent occurs, is the product, the \(A \land B\) or \(A \times B\)</li>
+<li>\(\Pi\) but no dependent occurs, is the function type or implies, the \(A \to B\)</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Created: 2023-02-25 Sat 18:28</p>
+<p class="date">Created: 2023-02-25 Sat 18:32</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
