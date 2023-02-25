@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-02-25 Sat 18:32 -->
+<!-- 2023-02-25 Sat 18:48 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>preorder 預序</title>
@@ -66,38 +66,38 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgf798711">0.1. preordered set</a></li>
-<li><a href="#org4976d26">0.2. partial order</a></li>
-<li><a href="#orga59e3d0">0.3. upper/lower bound</a></li>
-<li><a href="#orgaaaf7f9">0.4. greatest/least element</a></li>
-<li><a href="#org7cbf971">0.5. maximal/minimal</a></li>
-<li><a href="#org2310b8d">0.6. join/meet</a>
+<li><a href="#org68e120b">0.1. preordered set</a></li>
+<li><a href="#org943481c">0.2. partial order</a></li>
+<li><a href="#orgddf75b3">0.3. upper/lower bound</a></li>
+<li><a href="#orgdf277bc">0.4. greatest/least element</a></li>
+<li><a href="#orgdb7f7cf">0.5. maximal/minimal</a></li>
+<li><a href="#orgd424721">0.6. join/meet</a>
 <ul>
-<li><a href="#orge582b9e">0.6.1. singleton has only one meet/join</a></li>
-<li><a href="#org2e9ec2c">0.6.2. empty set</a></li>
+<li><a href="#org568b801">0.6.1. singleton has only one meet/join</a></li>
+<li><a href="#org22f9cad">0.6.2. empty set</a></li>
 </ul>
 </li>
-<li><a href="#org0bc0bd4">0.7. up/down set</a></li>
-<li><a href="#orgdd3d29b">0.8. chain</a>
+<li><a href="#orgd5dfa7f">0.7. up/down set</a></li>
+<li><a href="#orgf3babd2">0.8. chain</a>
 <ul>
-<li><a href="#org477538e">0.8.1. ω-chain</a></li>
-<li><a href="#orgc8b0336">0.8.2. anti-chain</a></li>
+<li><a href="#org31d5eb8">0.8.1. ω-chain</a></li>
+<li><a href="#org6071bb2">0.8.2. anti-chain</a></li>
 </ul>
 </li>
-<li><a href="#org1941960">0.9. reflect order</a></li>
-<li><a href="#orgca54fd9">0.10. order preserving</a></li>
-<li><a href="#orge64afdb">0.11. function order</a></li>
+<li><a href="#org8271a69">0.9. reflect order</a></li>
+<li><a href="#orgcbecffe">0.10. order preserving</a></li>
+<li><a href="#org5ff0dce">0.11. function order</a></li>
 </ul>
 </li>
-<li><a href="#org79f37e0">1. proposition</a>
+<li><a href="#org3439b97">1. proposition</a>
 <ul>
-<li><a href="#org0460491">1.1. Identity function on any preordered set is monotone</a></li>
-<li><a href="#orgc7ad29c">1.2. Composition of two monotone functions is monotone</a></li>
-<li><a href="#org21da930">1.3. Compose function between preordered sets is monotone</a></li>
-<li><a href="#org365bcdb">1.4. f : X × Y → Z is monotone, if it's monotone in each variable separately</a></li>
+<li><a href="#org2f4f4d7">1.1. Identity function on any preordered set is monotone</a></li>
+<li><a href="#org7d4c773">1.2. Composition of two monotone functions is monotone</a></li>
+<li><a href="#org5116933">1.3. Compose function between preordered sets is monotone</a></li>
+<li><a href="#orgd398248">1.4. f : X × Y → Z is monotone, if it's monotone in each variable separately</a></li>
 </ul>
 </li>
-<li><a href="#org33bede0">2. preoder free from powerset</a></div>
+<li><a href="#orgb7d5ace">2. preoder free from powerset</a></div>
 </div>
 <p>
 A preorder on a set X is a binary relation, such that, two elements of x, y ∈ X we can discuss x ≤ y.
@@ -116,8 +116,8 @@ The following definition are quite important for preorder, we will assume
 <li>A ⊆ X</li>
 </ul>
 
-<div id="outline-container-orgf798711" class="outline-3">
-<h3 id="orgf798711"><span class="section-number-3">0.1</span> preordered set</h3>
+<div id="outline-container-org68e120b" class="outline-3">
+<h3 id="org68e120b"><span class="section-number-3">0.1</span> preordered set</h3>
 <div class="outline-text-3" id="text-0-1">
 <p>
 A preordered set (X, ≤) is a set X equipped with a preorder
@@ -125,8 +125,8 @@ A preordered set (X, ≤) is a set X equipped with a preorder
 </div>
 </div>
 
-<div id="outline-container-org4976d26" class="outline-3">
-<h3 id="org4976d26"><span class="section-number-3">0.2</span> partial order</h3>
+<div id="outline-container-org943481c" class="outline-3">
+<h3 id="org943481c"><span class="section-number-3">0.2</span> partial order</h3>
 <div class="outline-text-3" id="text-0-2">
 <p>
 A partial order is a preorder that anti-symmetric, a set equipped with a partial order called <b>poset</b>
@@ -138,8 +138,8 @@ A partial order is a preorder that anti-symmetric, a set equipped with a partial
 </div>
 </div>
 
-<div id="outline-container-orga59e3d0" class="outline-3">
-<h3 id="orga59e3d0"><span class="section-number-3">0.3</span> upper/lower bound</h3>
+<div id="outline-container-orgddf75b3" class="outline-3">
+<h3 id="orgddf75b3"><span class="section-number-3">0.3</span> upper/lower bound</h3>
 <div class="outline-text-3" id="text-0-3">
 <p>
 An element x ∈ X is an upper bound of A, iff ∀ a ∈ A, a ≤ x
@@ -151,8 +151,8 @@ Reversely, x ∈ X is a lower bound of A, iff ∀ a ∈ A, x ≤ a
 </div>
 </div>
 
-<div id="outline-container-orgaaaf7f9" class="outline-3">
-<h3 id="orgaaaf7f9"><span class="section-number-3">0.4</span> greatest/least element</h3>
+<div id="outline-container-orgdf277bc" class="outline-3">
+<h3 id="orgdf277bc"><span class="section-number-3">0.4</span> greatest/least element</h3>
 <div class="outline-text-3" id="text-0-4">
 <p>
 An upper bound x of A is the greatest element iff x ∈ A
@@ -164,8 +164,8 @@ Reversely, lower bound x of A is the least element iff x ∈ A
 </div>
 </div>
 
-<div id="outline-container-org7cbf971" class="outline-3">
-<h3 id="org7cbf971"><span class="section-number-3">0.5</span> maximal/minimal</h3>
+<div id="outline-container-orgdb7f7cf" class="outline-3">
+<h3 id="orgdb7f7cf"><span class="section-number-3">0.5</span> maximal/minimal</h3>
 <div class="outline-text-3" id="text-0-5">
 <p>
 An element a ∈ A is maximal, if ∀ b, a ≤ b implies a ≅ b
@@ -177,8 +177,8 @@ Reversely, a ∈ A is minimal, if ∀ b, b ≤ a implies b ≅ a
 </div>
 </div>
 
-<div id="outline-container-org2310b8d" class="outline-3">
-<h3 id="org2310b8d"><span class="section-number-3">0.6</span> join/meet</h3>
+<div id="outline-container-orgd424721" class="outline-3">
+<h3 id="orgd424721"><span class="section-number-3">0.6</span> join/meet</h3>
 <div class="outline-text-3" id="text-0-6">
 <p>
 A join of A is that, a least element of the set of upper bounds for A (called least upper bound or supremum, sometimes)
@@ -196,8 +196,8 @@ A meet of A is, a greatest element of the set of lower bounds for A (called grea
 </ol>
 </div>
 
-<div id="outline-container-orge582b9e" class="outline-4">
-<h4 id="orge582b9e"><span class="section-number-4">0.6.1</span> singleton has only one meet/join</h4>
+<div id="outline-container-org568b801" class="outline-4">
+<h4 id="org568b801"><span class="section-number-4">0.6.1</span> singleton has only one meet/join</h4>
 <div class="outline-text-4" id="text-0-6-1">
 <p>
 ∨{x} = ∧{x} = x
@@ -205,8 +205,8 @@ A meet of A is, a greatest element of the set of lower bounds for A (called grea
 </div>
 </div>
 
-<div id="outline-container-org2e9ec2c" class="outline-4">
-<h4 id="org2e9ec2c"><span class="section-number-4">0.6.2</span> empty set</h4>
+<div id="outline-container-org22f9cad" class="outline-4">
+<h4 id="org22f9cad"><span class="section-number-4">0.6.2</span> empty set</h4>
 <div class="outline-text-4" id="text-0-6-2">
 <p>
 The ∨∅ called ⊥, if it existed, ⊥ ≤ x
@@ -219,8 +219,8 @@ The ∧∅ called ⊤, if it existed, x ≤ ⊤
 </div>
 </div>
 
-<div id="outline-container-org0bc0bd4" class="outline-3">
-<h3 id="org0bc0bd4"><span class="section-number-3">0.7</span> up/down set</h3>
+<div id="outline-container-orgd5dfa7f" class="outline-3">
+<h3 id="orgd5dfa7f"><span class="section-number-3">0.7</span> up/down set</h3>
 <div class="outline-text-3" id="text-0-7">
 <p>
 A up-set of A is { x ∈ X | A ≤ x }, written A↑
@@ -240,16 +240,16 @@ Reversely, x↓ = {x}↓
 </div>
 </div>
 
-<div id="outline-container-orgdd3d29b" class="outline-3">
-<h3 id="orgdd3d29b"><span class="section-number-3">0.8</span> chain</h3>
+<div id="outline-container-orgf3babd2" class="outline-3">
+<h3 id="orgf3babd2"><span class="section-number-3">0.8</span> chain</h3>
 <div class="outline-text-3" id="text-0-8">
 <p>
 If ∀ x, y ∈ A, we have x ≤ y or y ≤ x, which means we always have relation result for any two elements, then we say A is a <b>chain</b>
 </p>
 </div>
 
-<div id="outline-container-org477538e" class="outline-4">
-<h4 id="org477538e"><span class="section-number-4">0.8.1</span> ω-chain</h4>
+<div id="outline-container-org31d5eb8" class="outline-4">
+<h4 id="org31d5eb8"><span class="section-number-4">0.8.1</span> ω-chain</h4>
 <div class="outline-text-4" id="text-0-8-1">
 <p>
 If a <b>chain</b> can be indexed by ℕ, it's a ω-chain
@@ -257,8 +257,8 @@ If a <b>chain</b> can be indexed by ℕ, it's a ω-chain
 </div>
 </div>
 
-<div id="outline-container-orgc8b0336" class="outline-4">
-<h4 id="orgc8b0336"><span class="section-number-4">0.8.2</span> anti-chain</h4>
+<div id="outline-container-org6071bb2" class="outline-4">
+<h4 id="org6071bb2"><span class="section-number-4">0.8.2</span> anti-chain</h4>
 <div class="outline-text-4" id="text-0-8-2">
 <p>
 If ∀ x, y ∈ A, x ≤ y ⟹  y ≤ x, A is a <b>anti-chain</b>
@@ -267,8 +267,8 @@ If ∀ x, y ∈ A, x ≤ y ⟹  y ≤ x, A is a <b>anti-chain</b>
 </div>
 </div>
 
-<div id="outline-container-org1941960" class="outline-3">
-<h3 id="org1941960"><span class="section-number-3">0.9</span> reflect order</h3>
+<div id="outline-container-org8271a69" class="outline-3">
+<h3 id="org8271a69"><span class="section-number-3">0.9</span> reflect order</h3>
 <div class="outline-text-3" id="text-0-9">
 <p>
 A function <i>f</i> is said to <b>reflect order</b> if given any x, y ∈ X, f(x) ≤ f(y) ⟹  x ≤ y
@@ -276,8 +276,8 @@ A function <i>f</i> is said to <b>reflect order</b> if given any x, y ∈ X, f(x
 </div>
 </div>
 
-<div id="outline-container-orgca54fd9" class="outline-3">
-<h3 id="orgca54fd9"><span class="section-number-3">0.10</span> order preserving</h3>
+<div id="outline-container-orgcbecffe" class="outline-3">
+<h3 id="orgcbecffe"><span class="section-number-3">0.10</span> order preserving</h3>
 <div class="outline-text-3" id="text-0-10">
 <p>
 A monotone function can also be said it's <b>order preserving</b>
@@ -285,8 +285,8 @@ A monotone function can also be said it's <b>order preserving</b>
 </div>
 </div>
 
-<div id="outline-container-orge64afdb" class="outline-3">
-<h3 id="orge64afdb"><span class="section-number-3">0.11</span> function order</h3>
+<div id="outline-container-org5ff0dce" class="outline-3">
+<h3 id="org5ff0dce"><span class="section-number-3">0.11</span> function order</h3>
 <div class="outline-text-3" id="text-0-11">
 <p>
 We can also scale order to function,
@@ -302,18 +302,18 @@ where f, g : X → Y
 </div>
 </div>
 
-<div id="outline-container-org79f37e0" class="outline-2">
-<h2 id="org79f37e0"><span class="section-number-2">1</span> proposition</h2>
+<div id="outline-container-org3439b97" class="outline-2">
+<h2 id="org3439b97"><span class="section-number-2">1</span> proposition</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org0460491" class="outline-3">
-<h3 id="org0460491"><span class="section-number-3">1.1</span> Identity function on any preordered set is monotone</h3>
+<div id="outline-container-org2f4f4d7" class="outline-3">
+<h3 id="org2f4f4d7"><span class="section-number-3">1.1</span> Identity function on any preordered set is monotone</h3>
 </div>
-<div id="outline-container-orgc7ad29c" class="outline-3">
-<h3 id="orgc7ad29c"><span class="section-number-3">1.2</span> Composition of two monotone functions is monotone</h3>
+<div id="outline-container-org7d4c773" class="outline-3">
+<h3 id="org7d4c773"><span class="section-number-3">1.2</span> Composition of two monotone functions is monotone</h3>
 </div>
-<div id="outline-container-org21da930" class="outline-3">
-<h3 id="org21da930"><span class="section-number-3">1.3</span> Compose function between preordered sets is monotone</h3>
+<div id="outline-container-org5116933" class="outline-3">
+<h3 id="org5116933"><span class="section-number-3">1.3</span> Compose function between preordered sets is monotone</h3>
 <div class="outline-text-3" id="text-1-3">
 <p>
 Consider X, Y, Z be preordered sets
@@ -333,8 +333,8 @@ The compose function ○ is monotone between preordered sets
 </div>
 </div>
 
-<div id="outline-container-org365bcdb" class="outline-3">
-<h3 id="org365bcdb"><span class="section-number-3">1.4</span> f : X × Y → Z is monotone, if it's monotone in each variable separately</h3>
+<div id="outline-container-orgd398248" class="outline-3">
+<h3 id="orgd398248"><span class="section-number-3">1.4</span> f : X × Y → Z is monotone, if it's monotone in each variable separately</h3>
 <div class="outline-text-3" id="text-1-4">
 <p>
 details, it said
@@ -355,8 +355,8 @@ y ≤ y' ⟹  f(x, y) ≤ f(x, y')
 </div>
 </div>
 
-<div id="outline-container-org33bede0" class="outline-2">
-<h2 id="org33bede0"><span class="section-number-2">2</span> preoder free from powerset</h2>
+<div id="outline-container-orgb7d5ace" class="outline-2">
+<h2 id="orgb7d5ace"><span class="section-number-2">2</span> preoder free from powerset</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 A powerset of any set X is a free preorder, by the following
@@ -374,7 +374,7 @@ The ⊆ is the ≤, for any two elements of powerset a, b ∈ P(X)
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Created: 2023-02-25 Sat 18:32</p>
+<p class="date">Created: 2023-02-25 Sat 18:48</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-02-25 Sat 18:32 -->
+<!-- 2023-02-25 Sat 18:48 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>dependent type</title>
@@ -88,17 +88,18 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgacad7a0">1. introduction</a>
+<li><a href="#orgcb42faa">1. introduction</a>
 <ul>
-<li><a href="#org609d8b4">1.1. corresponding</a></li>
+<li><a href="#org84b4b25">1.1. corresponding to logic (Curry-Howard correspondence)</a></li>
 </ul>
 </li>
+<li><a href="#org50e0875">2. identity type</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgacad7a0" class="outline-2">
-<h2 id="orgacad7a0"><span class="section-number-2">1</span> introduction</h2>
+<div id="outline-container-orgcb42faa" class="outline-2">
+<h2 id="orgcb42faa"><span class="section-number-2">1</span> introduction</h2>
 <div class="outline-text-2" id="text-1">
 <ul class="org-ul">
 <li>In STΛC, terms depend on terms</li>
@@ -127,8 +128,8 @@ Rules are similar as STΛC, but formation (construct types) now also has context
 </ul>
 </div>
 
-<div id="outline-container-org609d8b4" class="outline-3">
-<h3 id="org609d8b4"><span class="section-number-3">1.1</span> corresponding</h3>
+<div id="outline-container-org84b4b25" class="outline-3">
+<h3 id="org84b4b25"><span class="section-number-3">1.1</span> corresponding to logic (Curry-Howard correspondence)</h3>
 <div class="outline-text-3" id="text-1-1">
 <ul class="org-ul">
 <li>\(\Pi\) is \(\forall\)</li>
@@ -139,9 +140,74 @@ Rules are similar as STΛC, but formation (construct types) now also has context
 </div>
 </div>
 </div>
+
+<div id="outline-container-org50e0875" class="outline-2">
+<h2 id="org50e0875"><span class="section-number-2">2</span> identity type</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Identity type written as \(a =_A b\), which means \(a\) equals to \(b\) if they have type \(A\).
+</p>
+
+<ul class="org-ul">
+<li><p>
+=-form: talking about that \(a =_A b\) is a type if we have &#x2026;
+</p>
+
+\begin{equation}
+\frac{
+	A : Type, a : A, b : A
+}{
+	a =_A b : Type
+}
+\end{equation}</li>
+
+<li><p>
+=-intro: how to make an instance of \(=\) by construction
+</p>
+
+<p>
+We also name this rule <b>reflexivity</b> or short <b>refl</b>.
+</p>
+
+\begin{equation}
+\frac{
+	a : A
+}{
+	r_a : a =_A a
+}
+\end{equation}</li>
+
+<li><p>
+=-elim
+</p>
+
+\begin{equation}
+\frac{
+	x : A, y : A, z : x =_A y \vdash D(x, y, z) : Type \\
+	x : A \vdash d : D(x, x, r_x)
+}{
+	x : A, y : A, z : x =_A y \vdash ind_=(d, x, y, z) : D(x, y, z)
+}
+\end{equation}</li>
+
+<li><p>
+=-comp
+</p>
+
+\begin{equation}
+\frac{
+	x : A, y : A, z : x =_A y \vdash D(x, y, z) : Type \\
+	x : A \vdash d : D(x, x, r_x)
+}{
+	x : A \vdash ind_=(d, x, y, r_x) : D(x, x, r_x)
+}
+\end{equation}</li>
+</ul>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Created: 2023-02-25 Sat 18:32</p>
+<p class="date">Created: 2023-02-25 Sat 18:48</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
