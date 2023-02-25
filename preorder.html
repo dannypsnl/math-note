@@ -3,195 +3,11 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-02-25 Sat 18:20 -->
+<!-- 2023-02-25 Sat 18:21 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>preorder 預序</title>
 <meta name="generator" content="Org mode" />
-<style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
-  .title  { text-align: center;
-             margin-bottom: .2em; }
-  .subtitle { text-align: center;
-              font-size: medium;
-              font-weight: bold;
-              margin-top:0; }
-  .todo   { font-family: monospace; color: red; }
-  .done   { font-family: monospace; color: green; }
-  .priority { font-family: monospace; color: orange; }
-  .tag    { background-color: #eee; font-family: monospace;
-            padding: 2px; font-size: 80%; font-weight: normal; }
-  .timestamp { color: #bebebe; }
-  .timestamp-kwd { color: #5f9ea0; }
-  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
-  .underline { text-decoration: underline; }
-  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
-  p.verse { margin-left: 3%; }
-  pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
-    padding: 8pt;
-    font-family: monospace;
-    overflow: auto;
-    margin: 1.2em;
-  }
-  pre.src {
-    position: relative;
-    overflow: visible;
-    padding-top: 1.2em;
-  }
-  pre.src:before {
-    display: none;
-    position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
-    padding: 3px;
-    border: 1px solid black;
-  }
-  pre.src:hover:before { display: inline;}
-  /* Languages per Org manual */
-  pre.src-asymptote:before { content: 'Asymptote'; }
-  pre.src-awk:before { content: 'Awk'; }
-  pre.src-C:before { content: 'C'; }
-  /* pre.src-C++ doesn't work in CSS */
-  pre.src-clojure:before { content: 'Clojure'; }
-  pre.src-css:before { content: 'CSS'; }
-  pre.src-D:before { content: 'D'; }
-  pre.src-ditaa:before { content: 'ditaa'; }
-  pre.src-dot:before { content: 'Graphviz'; }
-  pre.src-calc:before { content: 'Emacs Calc'; }
-  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-fortran:before { content: 'Fortran'; }
-  pre.src-gnuplot:before { content: 'gnuplot'; }
-  pre.src-haskell:before { content: 'Haskell'; }
-  pre.src-hledger:before { content: 'hledger'; }
-  pre.src-java:before { content: 'Java'; }
-  pre.src-js:before { content: 'Javascript'; }
-  pre.src-latex:before { content: 'LaTeX'; }
-  pre.src-ledger:before { content: 'Ledger'; }
-  pre.src-lisp:before { content: 'Lisp'; }
-  pre.src-lilypond:before { content: 'Lilypond'; }
-  pre.src-lua:before { content: 'Lua'; }
-  pre.src-matlab:before { content: 'MATLAB'; }
-  pre.src-mscgen:before { content: 'Mscgen'; }
-  pre.src-ocaml:before { content: 'Objective Caml'; }
-  pre.src-octave:before { content: 'Octave'; }
-  pre.src-org:before { content: 'Org mode'; }
-  pre.src-oz:before { content: 'OZ'; }
-  pre.src-plantuml:before { content: 'Plantuml'; }
-  pre.src-processing:before { content: 'Processing.js'; }
-  pre.src-python:before { content: 'Python'; }
-  pre.src-R:before { content: 'R'; }
-  pre.src-ruby:before { content: 'Ruby'; }
-  pre.src-sass:before { content: 'Sass'; }
-  pre.src-scheme:before { content: 'Scheme'; }
-  pre.src-screen:before { content: 'Gnu Screen'; }
-  pre.src-sed:before { content: 'Sed'; }
-  pre.src-sh:before { content: 'shell'; }
-  pre.src-sql:before { content: 'SQL'; }
-  pre.src-sqlite:before { content: 'SQLite'; }
-  /* additional languages in org.el's org-babel-load-languages alist */
-  pre.src-forth:before { content: 'Forth'; }
-  pre.src-io:before { content: 'IO'; }
-  pre.src-J:before { content: 'J'; }
-  pre.src-makefile:before { content: 'Makefile'; }
-  pre.src-maxima:before { content: 'Maxima'; }
-  pre.src-perl:before { content: 'Perl'; }
-  pre.src-picolisp:before { content: 'Pico Lisp'; }
-  pre.src-scala:before { content: 'Scala'; }
-  pre.src-shell:before { content: 'Shell Script'; }
-  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
-  /* additional language identifiers per "defun org-babel-execute"
-       in ob-*.el */
-  pre.src-cpp:before  { content: 'C++'; }
-  pre.src-abc:before  { content: 'ABC'; }
-  pre.src-coq:before  { content: 'Coq'; }
-  pre.src-groovy:before  { content: 'Groovy'; }
-  /* additional language identifiers from org-babel-shell-names in
-     ob-shell.el: ob-shell is the only babel language using a lambda to put
-     the execution function name together. */
-  pre.src-bash:before  { content: 'bash'; }
-  pre.src-csh:before  { content: 'csh'; }
-  pre.src-ash:before  { content: 'ash'; }
-  pre.src-dash:before  { content: 'dash'; }
-  pre.src-ksh:before  { content: 'ksh'; }
-  pre.src-mksh:before  { content: 'mksh'; }
-  pre.src-posh:before  { content: 'posh'; }
-  /* Additional Emacs modes also supported by the LaTeX listings package */
-  pre.src-ada:before { content: 'Ada'; }
-  pre.src-asm:before { content: 'Assembler'; }
-  pre.src-caml:before { content: 'Caml'; }
-  pre.src-delphi:before { content: 'Delphi'; }
-  pre.src-html:before { content: 'HTML'; }
-  pre.src-idl:before { content: 'IDL'; }
-  pre.src-mercury:before { content: 'Mercury'; }
-  pre.src-metapost:before { content: 'MetaPost'; }
-  pre.src-modula-2:before { content: 'Modula-2'; }
-  pre.src-pascal:before { content: 'Pascal'; }
-  pre.src-ps:before { content: 'PostScript'; }
-  pre.src-prolog:before { content: 'Prolog'; }
-  pre.src-simula:before { content: 'Simula'; }
-  pre.src-tcl:before { content: 'tcl'; }
-  pre.src-tex:before { content: 'TeX'; }
-  pre.src-plain-tex:before { content: 'Plain TeX'; }
-  pre.src-verilog:before { content: 'Verilog'; }
-  pre.src-vhdl:before { content: 'VHDL'; }
-  pre.src-xml:before { content: 'XML'; }
-  pre.src-nxml:before { content: 'XML'; }
-  /* add a generic configuration mode; LaTeX export needs an additional
-     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
-  pre.src-conf:before { content: 'Configuration File'; }
-
-  table { border-collapse:collapse; }
-  caption.t-above { caption-side: top; }
-  caption.t-bottom { caption-side: bottom; }
-  td, th { vertical-align:top;  }
-  th.org-right  { text-align: center;  }
-  th.org-left   { text-align: center;   }
-  th.org-center { text-align: center; }
-  td.org-right  { text-align: right;  }
-  td.org-left   { text-align: left;   }
-  td.org-center { text-align: center; }
-  dt { font-weight: bold; }
-  .footpara { display: inline; }
-  .footdef  { margin-bottom: 1em; }
-  .figure { padding: 1em; }
-  .figure p { text-align: center; }
-  .equation-container {
-    display: table;
-    text-align: center;
-    width: 100%;
-  }
-  .equation {
-    vertical-align: middle;
-  }
-  .equation-label {
-    display: table-cell;
-    text-align: right;
-    vertical-align: middle;
-  }
-  .inlinetask {
-    padding: 10px;
-    border: 2px solid gray;
-    margin: 10px;
-    background: #ffffcc;
-  }
-  #org-div-home-and-up
-   { text-align: right; font-size: 70%; white-space: nowrap; }
-  textarea { overflow-x: auto; }
-  .linenr { font-size: smaller }
-  .code-highlighted { background-color: #ffff00; }
-  .org-info-js_info-navigation { border-style: none; }
-  #org-info-js_console-label
-    { font-size: 10px; font-weight: bold; white-space: nowrap; }
-  .org-info-js_search-highlight
-    { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { width: 90%; }
-  /*]]>*/-->
-</style>
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
@@ -250,38 +66,38 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org93a7506">0.1. preordered set</a></li>
-<li><a href="#orgb3d203e">0.2. partial order</a></li>
-<li><a href="#org64ddd03">0.3. upper/lower bound</a></li>
-<li><a href="#org2886d9d">0.4. greatest/least element</a></li>
-<li><a href="#org74efada">0.5. maximal/minimal</a></li>
-<li><a href="#orgf3b2278">0.6. join/meet</a>
+<li><a href="#orge49b94c">0.1. preordered set</a></li>
+<li><a href="#orgf76af22">0.2. partial order</a></li>
+<li><a href="#org96effdd">0.3. upper/lower bound</a></li>
+<li><a href="#org6736f7c">0.4. greatest/least element</a></li>
+<li><a href="#org425019e">0.5. maximal/minimal</a></li>
+<li><a href="#orge8320d9">0.6. join/meet</a>
 <ul>
-<li><a href="#org7632dc5">0.6.1. singleton has only one meet/join</a></li>
-<li><a href="#orgf510e03">0.6.2. empty set</a></li>
+<li><a href="#orgf7a9343">0.6.1. singleton has only one meet/join</a></li>
+<li><a href="#org082b05c">0.6.2. empty set</a></li>
 </ul>
 </li>
-<li><a href="#orgc533fc2">0.7. up/down set</a></li>
-<li><a href="#org1e94724">0.8. chain</a>
+<li><a href="#orgea5260b">0.7. up/down set</a></li>
+<li><a href="#org5d2106e">0.8. chain</a>
 <ul>
-<li><a href="#orga04eafd">0.8.1. ω-chain</a></li>
-<li><a href="#org8b67663">0.8.2. anti-chain</a></li>
+<li><a href="#org8f09f3c">0.8.1. ω-chain</a></li>
+<li><a href="#org900d73c">0.8.2. anti-chain</a></li>
 </ul>
 </li>
-<li><a href="#orgb874c5e">0.9. reflect order</a></li>
-<li><a href="#orgc1d2f27">0.10. order preserving</a></li>
-<li><a href="#orgf95ac88">0.11. function order</a></li>
+<li><a href="#orgee13875">0.9. reflect order</a></li>
+<li><a href="#org2ca90c2">0.10. order preserving</a></li>
+<li><a href="#orgd0cef60">0.11. function order</a></li>
 </ul>
 </li>
-<li><a href="#orged081d0">1. proposition</a>
+<li><a href="#orgda72e43">1. proposition</a>
 <ul>
-<li><a href="#org73d576c">1.1. Identity function on any preordered set is monotone</a></li>
-<li><a href="#orga13a7b8">1.2. Composition of two monotone functions is monotone</a></li>
-<li><a href="#org8d2c892">1.3. Compose function between preordered sets is monotone</a></li>
-<li><a href="#org3d3a55b">1.4. f : X × Y → Z is monotone, if it's monotone in each variable separately</a></li>
+<li><a href="#orgac2898d">1.1. Identity function on any preordered set is monotone</a></li>
+<li><a href="#org3e06d16">1.2. Composition of two monotone functions is monotone</a></li>
+<li><a href="#org1c9fd66">1.3. Compose function between preordered sets is monotone</a></li>
+<li><a href="#org415f5b1">1.4. f : X × Y → Z is monotone, if it's monotone in each variable separately</a></li>
 </ul>
 </li>
-<li><a href="#org27031b3">2. preoder free from powerset</a></div>
+<li><a href="#org058f7a8">2. preoder free from powerset</a></div>
 </div>
 <p>
 A preorder on a set X is a binary relation, such that, two elements of x, y ∈ X we can discuss x ≤ y.
@@ -300,8 +116,8 @@ The following definition are quite important for preorder, we will assume
 <li>A ⊆ X</li>
 </ul>
 
-<div id="outline-container-org93a7506" class="outline-3">
-<h3 id="org93a7506"><span class="section-number-3">0.1</span> preordered set</h3>
+<div id="outline-container-orge49b94c" class="outline-3">
+<h3 id="orge49b94c"><span class="section-number-3">0.1</span> preordered set</h3>
 <div class="outline-text-3" id="text-0-1">
 <p>
 A preordered set (X, ≤) is a set X equipped with a preorder
@@ -309,8 +125,8 @@ A preordered set (X, ≤) is a set X equipped with a preorder
 </div>
 </div>
 
-<div id="outline-container-orgb3d203e" class="outline-3">
-<h3 id="orgb3d203e"><span class="section-number-3">0.2</span> partial order</h3>
+<div id="outline-container-orgf76af22" class="outline-3">
+<h3 id="orgf76af22"><span class="section-number-3">0.2</span> partial order</h3>
 <div class="outline-text-3" id="text-0-2">
 <p>
 A partial order is a preorder that anti-symmetric, a set equipped with a partial order called <b>poset</b>
@@ -322,8 +138,8 @@ A partial order is a preorder that anti-symmetric, a set equipped with a partial
 </div>
 </div>
 
-<div id="outline-container-org64ddd03" class="outline-3">
-<h3 id="org64ddd03"><span class="section-number-3">0.3</span> upper/lower bound</h3>
+<div id="outline-container-org96effdd" class="outline-3">
+<h3 id="org96effdd"><span class="section-number-3">0.3</span> upper/lower bound</h3>
 <div class="outline-text-3" id="text-0-3">
 <p>
 An element x ∈ X is an upper bound of A, iff ∀ a ∈ A, a ≤ x
@@ -335,8 +151,8 @@ Reversely, x ∈ X is a lower bound of A, iff ∀ a ∈ A, x ≤ a
 </div>
 </div>
 
-<div id="outline-container-org2886d9d" class="outline-3">
-<h3 id="org2886d9d"><span class="section-number-3">0.4</span> greatest/least element</h3>
+<div id="outline-container-org6736f7c" class="outline-3">
+<h3 id="org6736f7c"><span class="section-number-3">0.4</span> greatest/least element</h3>
 <div class="outline-text-3" id="text-0-4">
 <p>
 An upper bound x of A is the greatest element iff x ∈ A
@@ -348,8 +164,8 @@ Reversely, lower bound x of A is the least element iff x ∈ A
 </div>
 </div>
 
-<div id="outline-container-org74efada" class="outline-3">
-<h3 id="org74efada"><span class="section-number-3">0.5</span> maximal/minimal</h3>
+<div id="outline-container-org425019e" class="outline-3">
+<h3 id="org425019e"><span class="section-number-3">0.5</span> maximal/minimal</h3>
 <div class="outline-text-3" id="text-0-5">
 <p>
 An element a ∈ A is maximal, if ∀ b, a ≤ b implies a ≅ b
@@ -361,8 +177,8 @@ Reversely, a ∈ A is minimal, if ∀ b, b ≤ a implies b ≅ a
 </div>
 </div>
 
-<div id="outline-container-orgf3b2278" class="outline-3">
-<h3 id="orgf3b2278"><span class="section-number-3">0.6</span> join/meet</h3>
+<div id="outline-container-orge8320d9" class="outline-3">
+<h3 id="orge8320d9"><span class="section-number-3">0.6</span> join/meet</h3>
 <div class="outline-text-3" id="text-0-6">
 <p>
 A join of A is that, a least element of the set of upper bounds for A (called least upper bound or supremum, sometimes)
@@ -380,8 +196,8 @@ A meet of A is, a greatest element of the set of lower bounds for A (called grea
 </ol>
 </div>
 
-<div id="outline-container-org7632dc5" class="outline-4">
-<h4 id="org7632dc5"><span class="section-number-4">0.6.1</span> singleton has only one meet/join</h4>
+<div id="outline-container-orgf7a9343" class="outline-4">
+<h4 id="orgf7a9343"><span class="section-number-4">0.6.1</span> singleton has only one meet/join</h4>
 <div class="outline-text-4" id="text-0-6-1">
 <p>
 ∨{x} = ∧{x} = x
@@ -389,8 +205,8 @@ A meet of A is, a greatest element of the set of lower bounds for A (called grea
 </div>
 </div>
 
-<div id="outline-container-orgf510e03" class="outline-4">
-<h4 id="orgf510e03"><span class="section-number-4">0.6.2</span> empty set</h4>
+<div id="outline-container-org082b05c" class="outline-4">
+<h4 id="org082b05c"><span class="section-number-4">0.6.2</span> empty set</h4>
 <div class="outline-text-4" id="text-0-6-2">
 <p>
 The ∨∅ called ⊥, if it existed, ⊥ ≤ x
@@ -403,8 +219,8 @@ The ∧∅ called ⊤, if it existed, x ≤ ⊤
 </div>
 </div>
 
-<div id="outline-container-orgc533fc2" class="outline-3">
-<h3 id="orgc533fc2"><span class="section-number-3">0.7</span> up/down set</h3>
+<div id="outline-container-orgea5260b" class="outline-3">
+<h3 id="orgea5260b"><span class="section-number-3">0.7</span> up/down set</h3>
 <div class="outline-text-3" id="text-0-7">
 <p>
 A up-set of A is { x ∈ X | A ≤ x }, written A↑
@@ -424,16 +240,16 @@ Reversely, x↓ = {x}↓
 </div>
 </div>
 
-<div id="outline-container-org1e94724" class="outline-3">
-<h3 id="org1e94724"><span class="section-number-3">0.8</span> chain</h3>
+<div id="outline-container-org5d2106e" class="outline-3">
+<h3 id="org5d2106e"><span class="section-number-3">0.8</span> chain</h3>
 <div class="outline-text-3" id="text-0-8">
 <p>
 If ∀ x, y ∈ A, we have x ≤ y or y ≤ x, which means we always have relation result for any two elements, then we say A is a <b>chain</b>
 </p>
 </div>
 
-<div id="outline-container-orga04eafd" class="outline-4">
-<h4 id="orga04eafd"><span class="section-number-4">0.8.1</span> ω-chain</h4>
+<div id="outline-container-org8f09f3c" class="outline-4">
+<h4 id="org8f09f3c"><span class="section-number-4">0.8.1</span> ω-chain</h4>
 <div class="outline-text-4" id="text-0-8-1">
 <p>
 If a <b>chain</b> can be indexed by ℕ, it's a ω-chain
@@ -441,8 +257,8 @@ If a <b>chain</b> can be indexed by ℕ, it's a ω-chain
 </div>
 </div>
 
-<div id="outline-container-org8b67663" class="outline-4">
-<h4 id="org8b67663"><span class="section-number-4">0.8.2</span> anti-chain</h4>
+<div id="outline-container-org900d73c" class="outline-4">
+<h4 id="org900d73c"><span class="section-number-4">0.8.2</span> anti-chain</h4>
 <div class="outline-text-4" id="text-0-8-2">
 <p>
 If ∀ x, y ∈ A, x ≤ y ⟹  y ≤ x, A is a <b>anti-chain</b>
@@ -451,8 +267,8 @@ If ∀ x, y ∈ A, x ≤ y ⟹  y ≤ x, A is a <b>anti-chain</b>
 </div>
 </div>
 
-<div id="outline-container-orgb874c5e" class="outline-3">
-<h3 id="orgb874c5e"><span class="section-number-3">0.9</span> reflect order</h3>
+<div id="outline-container-orgee13875" class="outline-3">
+<h3 id="orgee13875"><span class="section-number-3">0.9</span> reflect order</h3>
 <div class="outline-text-3" id="text-0-9">
 <p>
 A function <i>f</i> is said to <b>reflect order</b> if given any x, y ∈ X, f(x) ≤ f(y) ⟹  x ≤ y
@@ -460,8 +276,8 @@ A function <i>f</i> is said to <b>reflect order</b> if given any x, y ∈ X, f(x
 </div>
 </div>
 
-<div id="outline-container-orgc1d2f27" class="outline-3">
-<h3 id="orgc1d2f27"><span class="section-number-3">0.10</span> order preserving</h3>
+<div id="outline-container-org2ca90c2" class="outline-3">
+<h3 id="org2ca90c2"><span class="section-number-3">0.10</span> order preserving</h3>
 <div class="outline-text-3" id="text-0-10">
 <p>
 A monotone function can also be said it's <b>order preserving</b>
@@ -469,8 +285,8 @@ A monotone function can also be said it's <b>order preserving</b>
 </div>
 </div>
 
-<div id="outline-container-orgf95ac88" class="outline-3">
-<h3 id="orgf95ac88"><span class="section-number-3">0.11</span> function order</h3>
+<div id="outline-container-orgd0cef60" class="outline-3">
+<h3 id="orgd0cef60"><span class="section-number-3">0.11</span> function order</h3>
 <div class="outline-text-3" id="text-0-11">
 <p>
 We can also scale order to function,
@@ -486,18 +302,18 @@ where f, g : X → Y
 </div>
 </div>
 
-<div id="outline-container-orged081d0" class="outline-2">
-<h2 id="orged081d0"><span class="section-number-2">1</span> proposition</h2>
+<div id="outline-container-orgda72e43" class="outline-2">
+<h2 id="orgda72e43"><span class="section-number-2">1</span> proposition</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org73d576c" class="outline-3">
-<h3 id="org73d576c"><span class="section-number-3">1.1</span> Identity function on any preordered set is monotone</h3>
+<div id="outline-container-orgac2898d" class="outline-3">
+<h3 id="orgac2898d"><span class="section-number-3">1.1</span> Identity function on any preordered set is monotone</h3>
 </div>
-<div id="outline-container-orga13a7b8" class="outline-3">
-<h3 id="orga13a7b8"><span class="section-number-3">1.2</span> Composition of two monotone functions is monotone</h3>
+<div id="outline-container-org3e06d16" class="outline-3">
+<h3 id="org3e06d16"><span class="section-number-3">1.2</span> Composition of two monotone functions is monotone</h3>
 </div>
-<div id="outline-container-org8d2c892" class="outline-3">
-<h3 id="org8d2c892"><span class="section-number-3">1.3</span> Compose function between preordered sets is monotone</h3>
+<div id="outline-container-org1c9fd66" class="outline-3">
+<h3 id="org1c9fd66"><span class="section-number-3">1.3</span> Compose function between preordered sets is monotone</h3>
 <div class="outline-text-3" id="text-1-3">
 <p>
 Consider X, Y, Z be preordered sets
@@ -517,8 +333,8 @@ The compose function ○ is monotone between preordered sets
 </div>
 </div>
 
-<div id="outline-container-org3d3a55b" class="outline-3">
-<h3 id="org3d3a55b"><span class="section-number-3">1.4</span> f : X × Y → Z is monotone, if it's monotone in each variable separately</h3>
+<div id="outline-container-org415f5b1" class="outline-3">
+<h3 id="org415f5b1"><span class="section-number-3">1.4</span> f : X × Y → Z is monotone, if it's monotone in each variable separately</h3>
 <div class="outline-text-3" id="text-1-4">
 <p>
 details, it said
@@ -539,8 +355,8 @@ y ≤ y' ⟹  f(x, y) ≤ f(x, y')
 </div>
 </div>
 
-<div id="outline-container-org27031b3" class="outline-2">
-<h2 id="org27031b3"><span class="section-number-2">2</span> preoder free from powerset</h2>
+<div id="outline-container-org058f7a8" class="outline-2">
+<h2 id="org058f7a8"><span class="section-number-2">2</span> preoder free from powerset</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 A powerset of any set X is a free preorder, by the following
@@ -558,7 +374,7 @@ The ⊆ is the ≤, for any two elements of powerset a, b ∈ P(X)
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Created: 2023-02-25 Sat 18:20</p>
+<p class="date">Created: 2023-02-25 Sat 18:21</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
