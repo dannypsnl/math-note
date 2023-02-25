@@ -1,9 +1,9 @@
 #+title: category theory
 #+html_link_home: index
+#+OPTIONS: tex:t
 #+html_mathjax: align: left indent: 5em tagside: left
-#+header: :file img/contour.svg :imagemagick yes
-#+header: :results output silent :headers '("\\usepackage{tikz}")
-#+header: :fit yes :imoutoptions -geometry 400 :iminoptions -density 600
+#+latex_header: \usepackage{tikz}
+#+latex_header: \usepackage{tikz-cd}
 
 ** small category
 
@@ -73,3 +73,18 @@
 	This category would be write as ~𝘼/a~, which
 	1. objects are pair ~(b, f : b → a)~
 	2. morphisms are those morphisms of ~𝘼~ makes whatever ~g : b → b'~ makes ~f = f' g~, where ~f' : b' → a~
+
+\begin{equation}
+x=\sqrt{b}
+\end{equation}
+
+\begin{equation}
+	\[\begin{tikzcd}
+		b &&&& {b'} \\
+		\\
+		&& a
+		\arrow["f", from=1-1, to=3-3]
+		\arrow["{f'}"', from=1-5, to=3-3]
+		\arrow["g"', from=1-1, to=1-5]
+	\end{tikzcd}\]
+\end{equation}

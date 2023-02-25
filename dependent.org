@@ -1,6 +1,8 @@
 #+title: dependent type
 #+html_link_home: index
 
+* introduction
+
 	+ In STΛC, terms depend on terms
 	+ In dependent type theory, not only terms, but types can depend on terms.
 	+ ~n : ℕ ⊢ isEven(n)~
