@@ -21,10 +21,58 @@
 
 	+ for now, type is proposition, program, sets
 	
-** corresponding
+** corresponding to logic (Curry-Howard correspondence)
 
 	 + $\Pi$ is $\forall$
 	 + $\Sigma$ is $\exists$
 	 + $\Sigma$ but no dependent occurs, is the product, the $A \land B$ or $A \times B$
 	 + $\Pi$ but no dependent occurs, is the function type or implies, the $A \to B$
+
+* identity type
+
+	Identity type written as $a =_A b$, which means $a$ equals to $b$ if they have type $A$.
+
+	+ =-form: talking about that $a =_A b$ is a type if we have ...
+
+		\begin{equation}
+		\frac{
+			A : Type, a : A, b : A
+		}{
+			a =_A b : Type
+		}
+		\end{equation}
+
+	+ =-intro: how to make an instance of $=$ by construction
+
+		We also name this rule *reflexivity* or short *refl*.
+
+		\begin{equation}
+		\frac{
+			a : A
+		}{
+			r_a : a =_A a
+		}
+		\end{equation}
+
+	+ =-elim
+
+		\begin{equation}
+		\frac{
+			x : A, y : A, z : x =_A y \vdash D(x, y, z) : Type \\
+			x : A \vdash d : D(x, x, r_x)
+		}{
+			x : A, y : A, z : x =_A y \vdash ind_=(d, x, y, z) : D(x, y, z)
+		}
+		\end{equation}
+
+	+ =-comp
+
+		\begin{equation}
+		\frac{
+			x : A, y : A, z : x =_A y \vdash D(x, y, z) : Type \\
+			x : A \vdash d : D(x, x, r_x)
+		}{
+			x : A \vdash ind_=(d, x, y, r_x) : D(x, x, r_x)
+		}
+		\end{equation}
 
