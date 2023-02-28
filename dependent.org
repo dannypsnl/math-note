@@ -76,3 +76,31 @@
 		}
 		\end{equation}
 
+** Internalize judgemental equality
+
+	\begin{equation}
+	a \doteq b : A
+	\end{equation}
+
+	internalize this using identity types
+
+	\begin{equation}
+	r_a : a =_A b
+	\end{equation}
+
+	1. If $a \doteq b : A$, then $(a =_A b) \doteq (a =_A a)$
+	2. , and if $r_a : a =_A a$, then $r_a : a =_A b$
+
+	Reflexivity $(r_)$ turns judgemental equalities into propositional equalities.
+
+** Functoriality
+
+	Functions act on paths/terms of the identity types.
+
+*** Proposition
+
+	For any two types $A$, $B$, any function $f : A \to B$, and any two terms $a, a' : A$, there is a function
+
+	\begin{equation}
+	ap_f : a =_A a' \to f\;a =_B f\;a'
+	\end{equation}
