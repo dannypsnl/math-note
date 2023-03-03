@@ -23,7 +23,53 @@
 	 and define identity of (A, B) as
 
 	 1(A, B) = (1A, 1B)
-	
+
+* definition: monic/monomorphism
+
+A morphism $f : A \to B$ is monic if for any $s, t : M \to A$, $f \circ s = f \circ t$ implies $s = t$.
+
++ monic is the generalization of injective
++ 更泛化的順序是 isomorphism ~> split monic ~> monic
+
+** proposition: isomorphism implies monic
+
+Let $f : A \to B$ be an isomorphism, then there has $f^{-1}$
+
+1. $f s = f t$ implies
+2. $f^{-1} f s = f^{-1} f t$ implies
+3. $s = t$
+
+Such conditions statisfy the definition of monic.
+
+** definition: split monic
+
+A monic $f : A \to B$ is split if there has a $g : B \to A$ makes $g f = id_A$.
+
+* definition: epic/epimorphism
+
+	A morphism $f : A \to B$ is an epic, if for any $s, t : B \to M$, $s f = t f$ implies $s = t$.
+
++ epic is the generalization of surjective
++ 更泛化的順序是 isomorphism ~> split epic ~> epic
+
+** proposition: isomorphism implies epic
+
+It has a similar proof as monic.
+
+** definition: split epic
+
+Follows monic & do it again.
+
+** isomorphism
+
+令 $f : A \to B$ 是一個 morphism 之後有 $g$ 令 $g f = id_A$ 同時 $f g = id_B$
+
+另外在 *Set* 底下
+
++ monic = injective
++ epic = surjective
++ isomorphism = bijective = injective + surjective
+
 * tranditional abstract algebra
 
 ** group by category
@@ -66,17 +112,13 @@
 
 ** TODO Definition: faithful
 
-* Definition: slice category
+* TODO definition: slice category
 
 	A slice category is about an object ~a~ and its category ~𝘼~.
 
 	This category would be write as ~𝘼/a~, which
 	1. objects are pair ~(b, f : b → a)~
 	2. morphisms are those morphisms of ~𝘼~ makes whatever ~g : b → b'~ makes ~f = f' g~, where ~f' : b' → a~
-
-\begin{equation}
-x=\sqrt{b}
-\end{equation}
 
 \begin{equation}
 	\[\begin{tikzcd}
