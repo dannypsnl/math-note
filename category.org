@@ -33,17 +33,19 @@ A morphism $f : A \to B$ is monic if for any $s, t : M \to A$, $f \circ s = f \c
 
 ** proposition: isomorphism implies monic
 
-Let $f : A \to B$ be an isomorphism, then there has $f^{-1}$
+Let $f : A \to B$ be an isomorphism, then there has $f^{-1}$ (refers to [[isomorphism]])
 
-1. $f s = f t$ implies
-2. $f^{-1} f s = f^{-1} f t$ implies
-3. $s = t$
+\begin{equation}
+f s = f t \\
+\implies f^{-1} f s = f^{-1} f t \\
+\implies s = t
+\end{equation}
 
 Such conditions statisfy the definition of monic.
 
 ** definition: split monic
 
-A monic $f : A \to B$ is split if there has a $g : B \to A$ makes $g f = id_A$.
+A monic $f : A \to B$ is split if there has a $g : B \to A$ makes $g f = id_A$, and hence $f s = f t \implies g f s = g f t \implies s = t$.
 
 * definition: epic/epimorphism
 
@@ -58,11 +60,11 @@ It has a similar proof as monic.
 
 ** definition: split epic
 
-Follows monic & do it again.
+A monic $f : A \to B$ is split if there has a $g : B \to A$ makes $f g = id_B$, and hence $s f = t f \implies s f g = t f g \implies s = t$.
 
 ** isomorphism
 
-令 $f : A \to B$ 是一個 morphism 之後有 $g$ 令 $g f = id_A$ 同時 $f g = id_B$
+令 $f : A \to B$ 是一個 morphism 之後有 $g$ 令 $g f = id_A$ 同時 $f g = id_B$，$g$ 亦可記為 $f^{-1}$
 
 另外在 *Set* 底下
 
