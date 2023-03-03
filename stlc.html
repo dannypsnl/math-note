@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-02-28 Tue 14:36 -->
+<!-- 2023-03-03 Fri 10:25 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>simply typed lambda calculus</title>
@@ -66,23 +66,23 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org3456933">0.1. Rule →</a>
+<li><a href="#org8be3110">0.1. Rule →</a>
 <ul>
-<li><a href="#orgbbb785f">0.1.1. Meta</a></li>
+<li><a href="#orgc4588a6">0.1.1. Meta</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org2055107">1. example</a>
+<li><a href="#org8fbe9e1">1. example</a>
 <ul>
-<li><a href="#orgd7d63f8">1.1. Q follows from P ∧ (P → Q)</a></li>
-<li><a href="#orge6f20e8">1.2. prove (P ∧ Q) → P</a></li>
+<li><a href="#orgdd6b193">1.1. Q follows from P ∧ (P → Q)</a></li>
+<li><a href="#orgd9d946a">1.2. prove (P ∧ Q) → P</a></li>
 </ul>
 </li>
-<li><a href="#orgd70cc38">2. note</a>
+<li><a href="#org24a440e">2. note</a>
 <ul>
-<li><a href="#orgb12f8dc">2.1. There is an interpretation of STΛC intos Set (Lambek 1985)</a></li>
-<li><a href="#orgf94c5ce">2.2. There is an equivalence between STΛC and CCC</a></li>
+<li><a href="#org07409ef">2.1. There is an interpretation of STΛC intos Set (Lambek 1985)</a></li>
+<li><a href="#org8dc3463">2.2. There is an equivalence between STΛC and CCC</a></li>
 </ul>
 </div>
 </div>
@@ -98,8 +98,8 @@ Such judgement, says p is a proof/witness of P, and P is a proposition.
 A term records the shape of proof tree
 </p>
 
-<div id="outline-container-org3456933" class="outline-3">
-<h3 id="org3456933"><span class="section-number-3">0.1</span> Rule →</h3>
+<div id="outline-container-org8be3110" class="outline-3">
+<h3 id="org8be3110"><span class="section-number-3">0.1</span> Rule →</h3>
 <div class="outline-text-3" id="text-0-1">
 <p>
 If we have type P, Q then we can form a type P → Q
@@ -139,8 +139,8 @@ Here, <code>q</code> is an expression that might involve x somewhere, for exampl
 </ol>
 </div>
 
-<div id="outline-container-orgbbb785f" class="outline-4">
-<h4 id="orgbbb785f"><span class="section-number-4">0.1.1</span> Meta</h4>
+<div id="outline-container-orgc4588a6" class="outline-4">
+<h4 id="orgc4588a6"><span class="section-number-4">0.1.1</span> Meta</h4>
 <div class="outline-text-4" id="text-0-1-1">
 <p>
 ⊢ is an external implication, and → is an internal implication
@@ -153,12 +153,12 @@ Therefore, the assumption x : P will disappeared after turnstile. From implement
 </div>
 </div>
 
-<div id="outline-container-org2055107" class="outline-2">
-<h2 id="org2055107"><span class="section-number-2">1</span> example</h2>
+<div id="outline-container-org8fbe9e1" class="outline-2">
+<h2 id="org8fbe9e1"><span class="section-number-2">1</span> example</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-orgd7d63f8" class="outline-3">
-<h3 id="orgd7d63f8"><span class="section-number-3">1.1</span> Q follows from P ∧ (P → Q)</h3>
+<div id="outline-container-orgdd6b193" class="outline-3">
+<h3 id="orgdd6b193"><span class="section-number-3">1.1</span> Q follows from P ∧ (P → Q)</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 Proof in natural deduction
@@ -193,8 +193,8 @@ Above can be write as a function
 </div>
 </div>
 
-<div id="outline-container-orge6f20e8" class="outline-3">
-<h3 id="orge6f20e8"><span class="section-number-3">1.2</span> prove (P ∧ Q) → P</h3>
+<div id="outline-container-orgd9d946a" class="outline-3">
+<h3 id="orgd9d946a"><span class="section-number-3">1.2</span> prove (P ∧ Q) → P</h3>
 <div class="outline-text-3" id="text-1-2">
 <ol class="org-ol">
 <li>hypothesis <code>a : (P, Q)</code></li>
@@ -209,20 +209,20 @@ The fun part should be introduce the construction is introduce the witness
 </div>
 </div>
 
-<div id="outline-container-orgd70cc38" class="outline-2">
-<h2 id="orgd70cc38"><span class="section-number-2">2</span> note</h2>
+<div id="outline-container-org24a440e" class="outline-2">
+<h2 id="org24a440e"><span class="section-number-2">2</span> note</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-orgb12f8dc" class="outline-3">
-<h3 id="orgb12f8dc"><span class="section-number-3">2.1</span> There is an interpretation of STΛC intos Set (Lambek 1985)</h3>
+<div id="outline-container-org07409ef" class="outline-3">
+<h3 id="org07409ef"><span class="section-number-3">2.1</span> There is an interpretation of STΛC intos Set (Lambek 1985)</h3>
 </div>
-<div id="outline-container-orgf94c5ce" class="outline-3">
-<h3 id="orgf94c5ce"><span class="section-number-3">2.2</span> There is an equivalence between STΛC and CCC</h3>
+<div id="outline-container-org8dc3463" class="outline-3">
+<h3 id="org8dc3463"><span class="section-number-3">2.2</span> There is an equivalence between STΛC and CCC</h3>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Created: 2023-02-28 Tue 14:36</p>
+<p class="date">Created: 2023-03-03 Fri 10:25</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
