@@ -1,0 +1,82 @@
+#+title: Alternative proof of Infinitude of Primes
+#+author: dannypsnl
+#+options: toc:nil
+#+latex_class: article
+#+latex_class_options: [a4paper]
+#+latex_header: \newtheorem{theorem}{Theorem}[section]
+#+latex_header: \newtheorem{corollary}{Corollary}[theorem]
+#+latex_header: \newtheorem{lemma}[theorem]{Lemma}
+#+latex_header: \newtheorem*{remark}{Remark}
+
+This is an alternative proof that infinite number of primes.
+
+* The definition of topology
+
+
+
+We consider a topology on $\mathbb{Z}$, and define
+
+\begin{equation}
+S_{a, b} = \{ an + b \mid n \in \mathbb{Z} \}
+\end{equation}
+
+It's easy to check that $S_{a, b}$ is a subset of $\mathbb{Z}$. The conditions of open are
+
+   1. $S_{a, b}$ is open iff $a \in \mathbb{Z} \setminus \{0\}$ and $b \in \mathbb{Z}$
+   2. $\varnothing$ is open
+
+and you should check conditions truly cover $\mathbb{Z}$ ($S_{1, 0}$) is open.
+
+* Sketch
+
+#+begin_lemma
+\label{lem:topology_open}
+The union of arbitrary collection of open sets is open.
+#+end_lemma
+
+#+begin_lemma
+\label{lem:l1}
+Every $S_{a, b}$ is closed.
+#+end_lemma
+#+begin_proof
+If $a = 0$, in this case $S_{a, b} = S_{0, b} = \{ b \}$. Therefore, $S_{0, b}$'s complement is $\mathbb{Z} \setminus \{b\}$, that can be re-expressed to
+
+\begin{equation}
+\bigcup_{\forall x \ge 2} S_{x, b-1} \cup S_{x, b+1}
+\end{equation}
+
+since $\forall x \ge 2$, $S_{x, b-1}$ and $S_{x, b+1}$ are open, by \ref{lem:topology_open} $\bigcup_{\forall x \ge 2} S_{x, b-1} \cup S_{x, b+1}$ must be open, so $S_{0, b} = \{ b \}$ is closed.
+
+If $|a| = 1$, the complement of $S_{1, b}$ is $\varnothing$, and hence $S_{1, b}$ is closed.
+
+If $|a| > 1$, the complement is the union of every $S_{a, b + y}$ where $0 < y < |a|$. Since every set in the complement is open, by \ref{lem:topology_open}, $S_{a, b}$ is closed.
+
+Now, we have enough information to say every $S_{a, b}$ is closed.
+#+end_proof
+
+* Conclusion
+
+#+begin_lemma
+\label{lem:l2}
+If $z$ has $p$ as a prime factor of it, then $z \in S_{p, 0}$.
+#+end_lemma
+#+begin_proof
+$z$ has $p$ as a prime factor means $z = pn + 0$, and hence
+
+\begin{equation}
+z = pn + 0 \in S_{p, 0}
+\end{equation}
+#+end_proof
+
+#+begin_theorem
+There has infinitely many primes.
+#+end_theorem
+#+begin_proof
+Because every integer has a prime factor except $1$ and $-1$, so we can say they are the union of all primes can cover, by \ref{lem:l2} that can be written as
+
+\begin{equation}
+\mathbb{Z} \setminus \{1, -1\} = \bigcup_{p \; \text{prime}} S_{p, 0}
+\end{equation}
+
+By \ref{lem:l1}, we know that every $S_{p, 0}$ is closed. The left hand side $\mathbb{Z} \setminus \{1, -1\}$ is open, and hence we must have infinitely many closed set on the right! Because the union of a finite collection of closed sets is closed. Therefore, we can have conclusion there are infinitely many primes.
+#+end_proof
