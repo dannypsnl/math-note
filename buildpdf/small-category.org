@@ -1,0 +1,42 @@
+#+title: small-category
+#+author: dannypsnl
+#+options: toc:nil
+#+latex_class: article
+#+latex_class_options: [a4paper]
+#+latex_header: \newtheorem{theorem}{Theorem}[section]
+#+latex_header: \newtheorem{corollary}{Corollary}[theorem]
+#+latex_header: \newtheorem{lemma}[theorem]{Lemma}
+#+latex_header: \newtheorem*{remark}{Remark}
+
+There has two sets
+
+1. A set of objects $C_0$
+2. A set of morphisms $C_1$
+
+Given a category with only two objects $C_0$ and $C_1$, like below
+
+#+begin_export latex
+% https://q.uiver.app/?q=WzAsMixbMCwwLCJDXzEiXSxbMiwwLCJDXzAiXSxbMCwxLCJzIiwwLHsib2Zmc2V0IjotMn1dLFswLDEsInQiLDIseyJvZmZzZXQiOjJ9XV0=
+\[\begin{tikzcd}
+	{C_1} && {C_0}
+	\arrow["s", shift left=2, from=1-1, to=1-3]
+	\arrow["t"', shift right=2, from=1-1, to=1-3]
+\end{tikzcd}\]
+#+end_export
+
+1. $s$ maps morphism to its source, e.g. $a \to b$ to $a$
+2. $t$ maps to target, e.g. $a \to b$ to $b$
+
+There is only one possible morphism from $C_0$ to $C_1$, that's $a$ to $a \to a$, forms
+
+#+begin_export latex
+% https://q.uiver.app/?q=WzAsMyxbMiwwLCJDXzEiXSxbNCwwLCJDXzAiXSxbMCwwLCJDXzAiXSxbMiwwLCJpZCJdLFswLDEsInMiLDAseyJvZmZzZXQiOi0yfV0sWzAsMSwidCIsMix7Im9mZnNldCI6Mn1dXQ==
+\[\begin{tikzcd}
+	{C_0} && {C_1} && {C_0}
+	\arrow["id", from=1-1, to=1-3]
+	\arrow["s", shift left=2, from=1-3, to=1-5]
+	\arrow["t"', shift right=2, from=1-3, to=1-5]
+\end{tikzcd}\]
+#+end_export
+
+and $a$ to $a \to a$ to $a$ is the identity of $C_0$.
