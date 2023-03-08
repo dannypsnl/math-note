@@ -11,6 +11,7 @@
         ("" "wrapfig" nil)
         ("" "rotating" nil)
         ("normalem" "ulem" t)
+        ("" "quiver" t)
         ("" "amsmath" t)
         ("" "amsthm" t)
         ("" "textcomp" t)

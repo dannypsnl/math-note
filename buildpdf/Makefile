@@ -7,7 +7,7 @@ all: $(sources)
 	-emacs -l config.el --batch $< -f org-latex-export-to-pdf
 
 %.pdf: %.tex
-	tectonic $<
+	tectonic $< -Z search-path=sty
 
 clean:
 	rm -f *.log *.aux *.tex *.tex~ *.pdf *.fdb_latexmk *.fls
