@@ -1,4 +1,4 @@
-sources = inf-primes-topology.pdf
+sources = inf-primes-topology.pdf small-category.pdf
 all: $(sources)
 	@echo "done"
 .PHONY: all
