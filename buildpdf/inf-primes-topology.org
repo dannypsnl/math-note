@@ -10,9 +10,7 @@
 
 This is an alternative proof that infinite number of primes.
 
-* The definition of topology
-
-
+* The definition of the topology
 
 We consider a topology on $\mathbb{Z}$, and define
 
