@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-03-08 Wed 18:30 -->
+<!-- 2023-03-11 Sat 16:49 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>category theory</title>
@@ -88,40 +88,40 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org428f7dc">0.1. small category</a></li>
-<li><a href="#org9d590c1">0.2. product category</a></li>
+<li><a href="#orge471bfc">0.1. small category</a></li>
+<li><a href="#org230e04a">0.2. product category</a></li>
 </ul>
 </li>
-<li><a href="#org354ba40">1. definition: monic/monomorphism</a>
+<li><a href="#orgc035c54">1. definition: monic/monomorphism</a>
 <ul>
-<li><a href="#org742aa59">1.1. proposition: isomorphism implies monic</a></li>
-<li><a href="#org8a99359">1.2. definition: split monic</a></li>
+<li><a href="#orgc3235ce">1.1. proposition: isomorphism implies monic</a></li>
+<li><a href="#orgdb76cc4">1.2. definition: split monic</a></li>
 </ul>
 </li>
-<li><a href="#org793aba6">2. definition: epic/epimorphism</a>
+<li><a href="#orgc0611e3">2. definition: epic/epimorphism</a>
 <ul>
-<li><a href="#orgd417e08">2.1. proposition: isomorphism implies epic</a></li>
-<li><a href="#org5968db5">2.2. definition: split epic</a></li>
-<li><a href="#orge10146b">2.3. isomorphism</a></li>
+<li><a href="#org70c13f4">2.1. proposition: isomorphism implies epic</a></li>
+<li><a href="#orgcf3b1c9">2.2. definition: split epic</a></li>
+<li><a href="#org898c026">2.3. isomorphism</a></li>
 </ul>
 </li>
-<li><a href="#org90aa871">3. tranditional abstract algebra</a>
+<li><a href="#orge72b190">3. tranditional abstract algebra</a>
 <ul>
-<li><a href="#org8ff1b07">3.1. group by category</a></li>
+<li><a href="#orgc8b325e">3.1. group by category</a></li>
 </ul>
 </li>
-<li><a href="#org2d14172">4. Functor</a>
+<li><a href="#orgaf567d3">4. Functor</a>
 <ul>
-<li><a href="#orga7076cf">4.1. Free functor (informal term)</a></li>
-<li><a href="#org393ab52">4.2. Definition: presheaf</a></li>
-<li><a href="#orgc2713b6">4.3. <span class="todo TODO">TODO</span> Definition: faithful</a></li>
+<li><a href="#org60e5ea1">4.1. Free functor (informal term)</a></li>
+<li><a href="#orgc2e0b01">4.2. Definition: presheaf</a></li>
+<li><a href="#orgdcbbc04">4.3. <span class="todo TODO">TODO</span> Definition: faithful</a></li>
 </ul>
 </li>
-<li><a href="#org4ab2c42">5. <span class="todo TODO">TODO</span> definition: slice category</a></div>
+<li><a href="#org9266a8b">5. <span class="todo TODO">TODO</span> definition: slice category</a></div>
 </div>
 
-<div id="outline-container-org428f7dc" class="outline-3">
-<h3 id="org428f7dc"><span class="section-number-3">0.1</span> small category</h3>
+<div id="outline-container-orge471bfc" class="outline-3">
+<h3 id="orge471bfc"><span class="section-number-3">0.1</span> small category</h3>
 <div class="outline-text-3" id="text-0-1">
 <p>
 small category is a category such that all of its objects form a set and all of its morphisms form a set.
@@ -129,8 +129,8 @@ small category is a category such that all of its objects form a set and all of 
 </div>
 </div>
 
-<div id="outline-container-org9d590c1" class="outline-3">
-<h3 id="org9d590c1"><span class="section-number-3">0.2</span> product category</h3>
+<div id="outline-container-org230e04a" class="outline-3">
+<h3 id="org230e04a"><span class="section-number-3">0.2</span> product category</h3>
 <div class="outline-text-3" id="text-0-2">
 <p>
 For any two categories 𝒜, ℬ, we can build a product of them as a category, write as 𝒜×ℬ
@@ -159,8 +159,8 @@ and define identity of (A, B) as
 </div>
 </div>
 
-<div id="outline-container-org354ba40" class="outline-2">
-<h2 id="org354ba40"><span class="section-number-2">1</span> definition: monic/monomorphism</h2>
+<div id="outline-container-orgc035c54" class="outline-2">
+<h2 id="orgc035c54"><span class="section-number-2">1</span> definition: monic/monomorphism</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 A morphism \(f : A \to B\) is monic if for any \(s, t : M \to A\), \(f \circ s = f \circ t\) implies \(s = t\).
@@ -172,11 +172,11 @@ A morphism \(f : A \to B\) is monic if for any \(s, t : M \to A\), \(f \circ s =
 </ul>
 </div>
 
-<div id="outline-container-org742aa59" class="outline-3">
-<h3 id="org742aa59"><span class="section-number-3">1.1</span> proposition: isomorphism implies monic</h3>
+<div id="outline-container-orgc3235ce" class="outline-3">
+<h3 id="orgc3235ce"><span class="section-number-3">1.1</span> proposition: isomorphism implies monic</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
-Let \(f : A \to B\) be an isomorphism, then there has \(f^{-1}\) (refers to <a href="#orge10146b">2.3</a>)
+Let \(f : A \to B\) be an isomorphism, then there has \(f^{-1}\) (refers to <a href="#org898c026">2.3</a>)
 </p>
 
 \begin{equation}
@@ -191,8 +191,8 @@ Such conditions statisfy the definition of monic.
 </div>
 </div>
 
-<div id="outline-container-org8a99359" class="outline-3">
-<h3 id="org8a99359"><span class="section-number-3">1.2</span> definition: split monic</h3>
+<div id="outline-container-orgdb76cc4" class="outline-3">
+<h3 id="orgdb76cc4"><span class="section-number-3">1.2</span> definition: split monic</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
 A monic \(f : A \to B\) is split if there has a \(g : B \to A\) makes \(g f = id_A\), and hence \(f s = f t \implies g f s = g f t \implies s = t\).
@@ -201,8 +201,8 @@ A monic \(f : A \to B\) is split if there has a \(g : B \to A\) makes \(g f = id
 </div>
 </div>
 
-<div id="outline-container-org793aba6" class="outline-2">
-<h2 id="org793aba6"><span class="section-number-2">2</span> definition: epic/epimorphism</h2>
+<div id="outline-container-orgc0611e3" class="outline-2">
+<h2 id="orgc0611e3"><span class="section-number-2">2</span> definition: epic/epimorphism</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 A morphism \(f : A \to B\) is an epic, if for any \(s, t : B \to M\), \(s f = t f\) implies \(s = t\).
@@ -214,8 +214,8 @@ A morphism \(f : A \to B\) is an epic, if for any \(s, t : B \to M\), \(s f = t 
 </ul>
 </div>
 
-<div id="outline-container-orgd417e08" class="outline-3">
-<h3 id="orgd417e08"><span class="section-number-3">2.1</span> proposition: isomorphism implies epic</h3>
+<div id="outline-container-org70c13f4" class="outline-3">
+<h3 id="org70c13f4"><span class="section-number-3">2.1</span> proposition: isomorphism implies epic</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 It has a similar proof as monic.
@@ -223,8 +223,8 @@ It has a similar proof as monic.
 </div>
 </div>
 
-<div id="outline-container-org5968db5" class="outline-3">
-<h3 id="org5968db5"><span class="section-number-3">2.2</span> definition: split epic</h3>
+<div id="outline-container-orgcf3b1c9" class="outline-3">
+<h3 id="orgcf3b1c9"><span class="section-number-3">2.2</span> definition: split epic</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
 A monic \(f : A \to B\) is split if there has a \(g : B \to A\) makes \(f g = id_B\), and hence \(s f = t f \implies s f g = t f g \implies s = t\).
@@ -232,8 +232,8 @@ A monic \(f : A \to B\) is split if there has a \(g : B \to A\) makes \(f g = id
 </div>
 </div>
 
-<div id="outline-container-orge10146b" class="outline-3">
-<h3 id="orge10146b"><span class="section-number-3">2.3</span> isomorphism</h3>
+<div id="outline-container-org898c026" class="outline-3">
+<h3 id="org898c026"><span class="section-number-3">2.3</span> isomorphism</h3>
 <div class="outline-text-3" id="text-2-3">
 <p>
 令 \(f : A \to B\) 是一個 morphism 之後有 \(g\) 令 \(g f = id_A\) 同時 $f g = id<sub>B</sub>$，\(g\) 亦可記為 \(f^{-1}\)
@@ -252,12 +252,12 @@ A monic \(f : A \to B\) is split if there has a \(g : B \to A\) makes \(f g = id
 </div>
 </div>
 
-<div id="outline-container-org90aa871" class="outline-2">
-<h2 id="org90aa871"><span class="section-number-2">3</span> tranditional abstract algebra</h2>
+<div id="outline-container-orge72b190" class="outline-2">
+<h2 id="orge72b190"><span class="section-number-2">3</span> tranditional abstract algebra</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-org8ff1b07" class="outline-3">
-<h3 id="org8ff1b07"><span class="section-number-3">3.1</span> group by category</h3>
+<div id="outline-container-orgc8b325e" class="outline-3">
+<h3 id="orgc8b325e"><span class="section-number-3">3.1</span> group by category</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 The group axioms can be formed by category thinking, that's a small-category that
@@ -315,8 +315,8 @@ Then the category diagram will just reflect the idea
 </div>
 </div>
 
-<div id="outline-container-org2d14172" class="outline-2">
-<h2 id="org2d14172"><span class="section-number-2">4</span> Functor</h2>
+<div id="outline-container-orgaf567d3" class="outline-2">
+<h2 id="orgaf567d3"><span class="section-number-2">4</span> Functor</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 A functor <code>F : 𝒜 → ℬ</code> consists
@@ -330,8 +330,8 @@ A functor <code>F : 𝒜 → ℬ</code> consists
 </ol>
 </div>
 
-<div id="outline-container-orga7076cf" class="outline-3">
-<h3 id="orga7076cf"><span class="section-number-3">4.1</span> Free functor (informal term)</h3>
+<div id="outline-container-org60e5ea1" class="outline-3">
+<h3 id="org60e5ea1"><span class="section-number-3">4.1</span> Free functor (informal term)</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
 Given any set <code>S</code>, one can build the <b>free group</b> <code>F(S)</code> on <code>S</code>. For example, said <code>S = {x, y, z}</code>, insert <code>e</code>, <code>x⁻¹</code>, <code>y⁻¹</code>, <code>z⁻¹</code> makes a group (informally). Just like we have in mind, <code>x ⋅ x⁻¹ = e</code>, and so on. This group is the <b>free group</b> of <code>{x, y, z}</code>. On the other hand, this <code>F</code> became a functor, from <b>Set</b> to <b>Grp</b>. Maps of sets <code>S</code>, <code>S'</code>, rise to a homomorphism of groups.
@@ -343,8 +343,8 @@ The same can be done for <b>Set</b> to <b>Vectₖ</b>, <b>Set</b> to <b>CRing</b
 </div>
 </div>
 
-<div id="outline-container-org393ab52" class="outline-3">
-<h3 id="org393ab52"><span class="section-number-3">4.2</span> Definition: presheaf</h3>
+<div id="outline-container-orgc2e0b01" class="outline-3">
+<h3 id="orgc2e0b01"><span class="section-number-3">4.2</span> Definition: presheaf</h3>
 <div class="outline-text-3" id="text-4-2">
 <p>
 A presheaf on category 𝔄 is a functor 𝔄ᵒᵖ → <b>Set</b>
@@ -352,13 +352,13 @@ A presheaf on category 𝔄 is a functor 𝔄ᵒᵖ → <b>Set</b>
 </div>
 </div>
 
-<div id="outline-container-orgc2713b6" class="outline-3">
-<h3 id="orgc2713b6"><span class="section-number-3">4.3</span> <span class="todo TODO">TODO</span> Definition: faithful</h3>
+<div id="outline-container-orgdcbbc04" class="outline-3">
+<h3 id="orgdcbbc04"><span class="section-number-3">4.3</span> <span class="todo TODO">TODO</span> Definition: faithful</h3>
 </div>
 </div>
 
-<div id="outline-container-org4ab2c42" class="outline-2">
-<h2 id="org4ab2c42"><span class="section-number-2">5</span> <span class="todo TODO">TODO</span> definition: slice category</h2>
+<div id="outline-container-org9266a8b" class="outline-2">
+<h2 id="org9266a8b"><span class="section-number-2">5</span> <span class="todo TODO">TODO</span> definition: slice category</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 A slice category is about an object <code>a</code> and its category <code>𝘼</code>.
@@ -386,7 +386,7 @@ This category would be write as <code>𝘼/a</code>, which
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Created: 2023-03-08 Wed 18:30</p>
+<p class="date">Created: 2023-03-11 Sat 16:49</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

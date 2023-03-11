@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-03-08 Wed 18:30 -->
+<!-- 2023-03-11 Sat 16:49 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>dependent type</title>
@@ -88,17 +88,17 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org8868cad">1. introduction</a>
+<li><a href="#org3d7693f">1. introduction</a>
 <ul>
-<li><a href="#org99a7177">1.1. corresponding to logic (Curry-Howard correspondence)</a></li>
+<li><a href="#orgabf57fa">1.1. corresponding to logic (Curry-Howard correspondence)</a></li>
 </ul>
 </li>
-<li><a href="#org9b4ad2b">2. identity type</a>
+<li><a href="#org4f0f5f3">2. identity type</a>
 <ul>
-<li><a href="#org8736ebb">2.1. Internalize judgemental equality</a></li>
-<li><a href="#orgbef7a89">2.2. Functoriality</a>
+<li><a href="#org429e0e8">2.1. Internalize judgemental equality</a></li>
+<li><a href="#org2db0f39">2.2. Functoriality</a>
 <ul>
-<li><a href="#orgb779e90">2.2.1. Proposition</a></li>
+<li><a href="#org65e5d74">2.2.1. Proposition</a></li>
 </ul>
 </li>
 </ul>
@@ -107,8 +107,8 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-org8868cad" class="outline-2">
-<h2 id="org8868cad"><span class="section-number-2">1</span> introduction</h2>
+<div id="outline-container-org3d7693f" class="outline-2">
+<h2 id="org3d7693f"><span class="section-number-2">1</span> introduction</h2>
 <div class="outline-text-2" id="text-1">
 <ul class="org-ul">
 <li>In STΛC, terms depend on terms</li>
@@ -137,8 +137,8 @@ Rules are similar as STΛC, but formation (construct types) now also has context
 </ul>
 </div>
 
-<div id="outline-container-org99a7177" class="outline-3">
-<h3 id="org99a7177"><span class="section-number-3">1.1</span> corresponding to logic (Curry-Howard correspondence)</h3>
+<div id="outline-container-orgabf57fa" class="outline-3">
+<h3 id="orgabf57fa"><span class="section-number-3">1.1</span> corresponding to logic (Curry-Howard correspondence)</h3>
 <div class="outline-text-3" id="text-1-1">
 <ul class="org-ul">
 <li>\(\Pi\) is \(\forall\)</li>
@@ -150,8 +150,8 @@ Rules are similar as STΛC, but formation (construct types) now also has context
 </div>
 </div>
 
-<div id="outline-container-org9b4ad2b" class="outline-2">
-<h2 id="org9b4ad2b"><span class="section-number-2">2</span> identity type</h2>
+<div id="outline-container-org4f0f5f3" class="outline-2">
+<h2 id="org4f0f5f3"><span class="section-number-2">2</span> identity type</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Identity type written as \(a =_A b\), which means \(a\) equals to \(b\) if they have type \(A\).
@@ -214,8 +214,8 @@ We also name this rule <b>reflexivity</b> or short <b>refl</b>.
 </ul>
 </div>
 
-<div id="outline-container-org8736ebb" class="outline-3">
-<h3 id="org8736ebb"><span class="section-number-3">2.1</span> Internalize judgemental equality</h3>
+<div id="outline-container-org429e0e8" class="outline-3">
+<h3 id="org429e0e8"><span class="section-number-3">2.1</span> Internalize judgemental equality</h3>
 <div class="outline-text-3" id="text-2-1">
 \begin{equation}
 a \doteq b : A
@@ -240,16 +240,16 @@ Reflexivity \((r_)\) turns judgemental equalities into propositional equalities.
 </div>
 </div>
 
-<div id="outline-container-orgbef7a89" class="outline-3">
-<h3 id="orgbef7a89"><span class="section-number-3">2.2</span> Functoriality</h3>
+<div id="outline-container-org2db0f39" class="outline-3">
+<h3 id="org2db0f39"><span class="section-number-3">2.2</span> Functoriality</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
 Functions act on paths/terms of the identity types.
 </p>
 </div>
 
-<div id="outline-container-orgb779e90" class="outline-4">
-<h4 id="orgb779e90"><span class="section-number-4">2.2.1</span> Proposition</h4>
+<div id="outline-container-org65e5d74" class="outline-4">
+<h4 id="org65e5d74"><span class="section-number-4">2.2.1</span> Proposition</h4>
 <div class="outline-text-4" id="text-2-2-1">
 <p>
 For any two types \(A\), \(B\), any function \(f : A \to B\), and any two terms \(a, a' : A\), there is a function
@@ -264,7 +264,7 @@ ap_f : a =_A a' \to f\;a =_B f\;a'
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Created: 2023-03-08 Wed 18:30</p>
+<p class="date">Created: 2023-03-11 Sat 16:49</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
